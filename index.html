@@ -94,149 +94,18 @@
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-09-21
+					   			2017-09-04
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/21/bootstrap1/">初始bootstrap</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p>在boostrap框架中，大多数的标签的样式都被重新定义了，而不是采用浏览器默认的样式。同时，也封装了很多常用的样式类(class)，在开发时，可直接给标签添加类名即可。以下是常见的类。</p>
-<p></p><h2>排版</h2><br>(1)text-left:  文本左对齐。  示例：&lt;标签 class=”text-left”&gt;我爱打水&lt;/标签&gt;<br>(2)text-center:  文本居中<br>(3)text-right:  文本右对齐<br>(4)list-unstyled: 移除默认样式 (主要对ul li 列表来说)<br>(5)list-inline:  将元素设置成内联样式(常用于制作导航栏)<br>
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-18
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/18/route/">angular-ui-路由</a>
+					   		<a class="post-title-link" href="/2017/09/04/hello-world/">新的开始！</a>
 					   	</div>
 					   	<div class="post-content">
 					   		
 					   	</div>
 				   </article>
 				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-16
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/16/angular_servic/">angularjs服务</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p>(1)$sce:安全处理html数据。在scope里面的数据中，有时存在标签的字符串数据($scope.data =”&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”),如果直接进行显示操作，结果仍然是&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”，而不是“我爱打水”，要想得到后者，则要注入$sce服务。具体事例如下：</p>
-					   	</div>
-				   </article>
 				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-15
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/15/ng_directive/">自定义指令directive</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p>代码示例:<br>var m = angular.module(‘app’,[]);<br>m.directive(‘mystyle’,[function(){<br>    return {<br>    restrict:”A”,<br>    template:”我爱打水”,<br>    replace:true<br>}<br>}])<br>解析：directive的参数：(1)指令名称<br>                       (2)自定义处理函数，返回的是Json数据<br>属性：<br>      (1)restict:指令的表现形式(A(atrr)表示属性，E(elemt)：元素，C:class)<br>      (2)template:指令在页面的内容<br>
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-14
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/14/angularjs4/">angularJs细节</a>
-					   	</div>
-					   	<div class="post-content">
-					   		
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-08
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/08/css3/"></a>
-					   	</div>
-					   	<div class="post-content">
-					   		
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-07
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/07/angularjs3/">angularJs函数</a>
-					   	</div>
-					   	<div class="post-content">
-					   		
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-07
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/07/angularjs2/">angularJs常见的指令</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p>(1)ng-true-value=”1”  选择时，指定值为1;<br>(2)ng-false-value=”0”  取消时，指定值为0;<br> <strong>一般配合checkBox 来使用</strong><br>(3)ng-show:当为true时，显示某元素，反之亦然。<br>(4)ng-options:下拉选项指令 一般值为：ng-options=’v.value as v.name for v in data’<br>(5)ng-trim:去掉前后空格(很少用)<br>(6)ng-if:隐藏元素(删除当前元素，即是从DOM中移除节点，注意与ng-show的区别)<br>
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-06
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/06/angularjs1/">初识angularJS</a>
-					   	</div>
-					   	<div class="post-content">
-					   		
-					   	</div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-09-05
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/09/05/boxmodel/">盒子模型</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p>margin塌陷现象<br>   如果一个大盒子中包含一个小盒子，在给小盒子设置margin-top时，大盒子也会一起向下平移。<br>解决方案：<br>(1)给大盒子加一个边框<br>(2)给大盒子设置一个overflow属性<br>(3)添加浮动<br>
-					   	</div>
-				   </article>
-				
-				
-    <nav class="page-nav">
-    	<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
-    </nav>
-
 
 			</section> 	    	
  	    </div>
