@@ -76,6 +76,16 @@ body{
 	border-radius: 20px;
 	list-style: none;
 }
+.post-title{
+   font-size: 24px;
+   .post-title-link{
+      color: #368CCB;
+      text-decoration: none;
+   }
+   margin-top: 20px;
+   margin-bottom: 10px;
+
+}
 .paper-body .more{
 	width: 82px;
 	height: 34px;
