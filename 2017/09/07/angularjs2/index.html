@@ -1,0 +1,70 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/Home"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Github"  class="menu-item-link">
+			            		社交
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<article class="post">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-09-07
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">angularJs常见的指令</h2>
+	</div>
+
+	<div class="post-content">
+		<p>(1)ng-true-value=”1”  选择时，指定值为1;<br>(2)ng-false-value=”0”  取消时，指定值为0;<br> <strong>一般配合checkBox 来使用</strong><br>(3)ng-show:当为true时，显示某元素，反之亦然。<br>(4)ng-options:下拉选项指令 一般值为：ng-options=’v.value as v.name for v in data’<br>(5)ng-trim:去掉前后空格(很少用)<br>(6)ng-if:隐藏元素(删除当前元素，即是从DOM中移除节点，注意与ng-show的区别)<br><a id="more"></a><br>(7)ng-repeat:循环遍历数组  ng-repeat = “v in data”<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   注意：在遍历具有重复数据的数组时，如果不是根据下标来遍历的话，往往会出错，解决方法是：ng-repeat = &quot;v in data track by $index&quot;</div><div class="line">`</div></pre></td></tr></table></figure></p>
+<p> (8)ng-readonly:不能修改但可以提交<br> (9)ng-disabled:不能修改也不可以提交<br> (10)ng-model-options:设置数据同步提交时机<br>     具体用法：ng-model-options = “{updateOn:blur}”//失去焦点时，提交<br>               ng-model-options = “{debounce:3000}”//用户请求3秒后 提交<br>               ng-model-options = “{updateOn:’default blur’,debounce:{default:3000,blur:0}”//当失去焦点时，立即提交，否则 3秒后提交</p>
+
+	</div>
+</article>
+	</body>
+</html>

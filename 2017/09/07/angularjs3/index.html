@@ -1,0 +1,69 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/Home"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Github"  class="menu-item-link">
+			            		社交
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<article class="post">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-09-07
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">angularJs函数</h2>
+	</div>
+
+	<div class="post-content">
+		<p>angularJs中的浅拷贝与深拷贝<br>(1)浅拷贝:<br>  var obj={name:’我爱打水’}；<br>  var obj1 = obj;<br>(2)深拷贝：<br>   var obj={name:’我爱打水’}；<br>   var obj1 = {};<br>   angular.copy(obj,obj1);<br>(3)angular.extend(obj,{url:’baidu.com’,web:’I love wed’})<br>   扩充函数：如上述向obj中添加项<br>(4)angular.forEach(data,function(v,k)){}:循环遍历data对象，function中的参数  V代表属性值，k表示属性名<br>(5)angular.ToJson(“json”):Json对象转json字符串<br>(6)angular.Form(“json”):Json字符串转json对象<br>(7)new Date().getTime():返回距 1970 年 1 月 1 日之间的毫秒数：<br>(8)$scope.$watch(a,b,c)函数，用于监听模型变化，当你的模型部分发生变化时它会通知你。<br>参数含义：a：监听的对象模型，如title<br>          b：监听对象变化后，具体处理函数<br>          c：是否深度监听，当为true时，anguler监听对象中每一个属性的变化。<br>(9)$scope.$apply():当数据改变时，而且没有在angularjs里操作的情况下，需要我们自己去调用$scope.$apply();来进行数据的脏检查，更新页面数据。</p>
+
+	</div>
+</article>
+	</body>
+</html>

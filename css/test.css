@@ -1,0 +1,92 @@
+body{
+	background: #c0c0c0;
+}
+.fl{
+	float: left;
+}
+.fr{
+   float: right;
+}
+.navul li span {
+	margin-right: 5px;
+}
+.navul{
+	padding: 0px;
+	margin-top: 0px;
+}
+.wbox{
+  width: 100%;
+  background: #393d49;
+  /*text-align: center;*/
+   margin: 0px 0 0 0;
+}
+
+.navbar-default{
+	background: #393d49;
+	border-bottom: 1px solid #1a3d49;
+}
+.row .rowitem{
+	box-sizing: border-box;
+	background: white;
+	/*height: 160px;*/
+	/*border: 1px solid #393D49;*/
+	margin: 20px 50px;
+}
+.row .rowitem h3{
+	display: block;
+	text-align: center;
+}
+.box{
+	max-width: 1200px;
+    margin: 30px auto;
+    position: relative;
+}
+.banner{
+	width: 100%;
+	height: 50px;
+	background: #204D74;
+}
+.main{
+	margin-top: 50px;
+}
+.pageLeft{
+	/*width: 15%;*/
+	/*height: 200px;*/
+	background: #F5F5F5;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.pageRight{
+	/*width: 80%;*/
+	min-height: 500px;
+	/*background: palegoldenrod;*/
+}
+.footer{
+	/*transform: translateX(40%);*/
+	padding-left: 35%;
+}
+.motto{
+	margin-top: 20px;
+	text-align: left;
+}
+.paper-item{
+	margin: 20px auto;
+	padding: 20px;
+	background: pink;
+	border-radius: 20px;
+	list-style: none;
+}
+.paper-body .more{
+	width: 82px;
+	height: 34px;
+	margin: 0 auto;
+}
+.breadcrumb{
+	background: #393D49;
+	color: #777;
+	padding: 0px;
+	margin: 0px;
+}
+.register li{
+	cursor: pointer;
+}

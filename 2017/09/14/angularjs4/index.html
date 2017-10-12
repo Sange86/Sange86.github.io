@@ -1,0 +1,70 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/Home"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Github"  class="menu-item-link">
+			            		社交
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<article class="post">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-09-14
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">angularJs细节</h2>
+	</div>
+
+	<div class="post-content">
+		<p>(1)过滤器：可以使用一个管道字符（|）添加到表达式和指令中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">AngularJS 过滤器可用于转换数据：</div><div class="line">过滤器	    描述</div><div class="line">currency	格式化数字为货币格式。   用例：原始数据为：<span class="variable">$scope</span>.price = 125.22  过滤操作  &#123;&#123;price|currency:<span class="string">'￥'</span>：1&#125;&#125;   输出为：￥125.2   注：后面的1表示  保留一位小数</div><div class="line">filter	    从数组项中选择一个子集。(匹配字段) 用例：&#123;&#123;data:filter:<span class="string">'string'</span>:<span class="literal">true</span>或者<span class="literal">false</span>&#125;&#125;  <span class="literal">true</span>表示完全匹配  <span class="literal">false</span>表示包含即可(默认为fasle)   </div><div class="line">lowercase	格式化字符串为小写。</div><div class="line">&lt;!--more--&gt;</div><div class="line">orderBy	    根据某个表达式排列数组。   用例：&#123;&#123;data|orderBy:<span class="string">'变量'</span>：<span class="literal">true</span>或者<span class="literal">false</span>&#125;&#125;  <span class="literal">false</span>为升   <span class="literal">true</span>为降</div><div class="line">uppercase	格式化字符串为大写。</div><div class="line">limtTo      从文本中截取数据      用例：原始数据为：<span class="variable">$scope</span>.data = <span class="string">"我爱打水哈哈哈哈哈哈哈"</span>    过滤操作  &#123;&#123;data|limitTo:4：0&#125;&#125;   输出为：我爱打水   注：后面的0表示  从哪一位开始。</div></pre></td></tr></table></figure></p>
+<p>控制器中使用过滤服务：<br>步骤：(1)将过滤服务注入控制器中//app.controller(“ctrl”,[“$scope”,”$filter”,function($scope,$filter){}]);<br>      (2)定义并处理要过滤的数据的相关函数<br>      $scope.orderBy = function(){<br>            $scope.data=$filter(‘过滤器’：如orderBy,limitTo等)($scope,id,true);<br>      }<br>自定义过滤器：<br>m.filter(“过滤器名”，function(){<br>    return function(“需过的滤数据”，”其他””){<br>         return  /Todo…..<br>    }<br>})</p>
+
+	</div>
+</article>
+	</body>
+</html>
