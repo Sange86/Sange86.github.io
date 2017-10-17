@@ -57,26 +57,21 @@
     </nav>	    
 </header>
 		<div class="bodyheight">
-		   <div class="container postArc">
-	<section class="archive">
-		<ul class="post-archive clearfix">
-			
-			  <li class="post-item">
-			  	<div class="post-date">
-			  		2017-10-16
-			  	</div>
-			  	<div class="postright">
-				  	<a class="post-title" href="/2017/10/16/hello-world/">
-				  		新的开始！
-				  	</a>
-			  	</div>
-			  </li>
-			
-		</ul>
-	</section>
-</div>
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">angularJs函数</h2>
+	</div>
 
+	<div class="post-content">
+		<p>angularJs中的浅拷贝与深拷贝<br>(1)浅拷贝:<br>  var obj={name:’我爱打水’}；<br>  var obj1 = obj;<br>(2)深拷贝：<br>   var obj={name:’我爱打水’}；<br>   var obj1 = {};<br>   angular.copy(obj,obj1);<br>(3)angular.extend(obj,{url:’baidu.com’,web:’I love wed’})<br>   扩充函数：如上述向obj中添加项<br>(4)angular.forEach(data,function(v,k)){}:循环遍历data对象，function中的参数  V代表属性值，k表示属性名<br>(5)angular.ToJson(“json”):Json对象转json字符串<br>(6)angular.Form(“json”):Json字符串转json对象<br>(7)new Date().getTime():返回距 1970 年 1 月 1 日之间的毫秒数：<br>(8)$scope.$watch(a,b,c)函数，用于监听模型变化，当你的模型部分发生变化时它会通知你。<br>参数含义：a：监听的对象模型，如title<br>          b：监听对象变化后，具体处理函数<br>          c：是否深度监听，当为true时，anguler监听对象中每一个属性的变化。<br>(9)$scope.$apply():当数据改变时，而且没有在angularjs里操作的情况下，需要我们自己去调用$scope.$apply();来进行数据的脏检查，更新页面数据。</p>
 
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">

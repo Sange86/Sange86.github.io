@@ -28,7 +28,7 @@
 			    <ul class="nav navbar-nav navbar-right navul">
 			        
 			            <li class="menu-item">
-			            	<a href="/Home"  class="menu-item-link">
+			            	<a href="/"  class="menu-item-link">
 			            		主页
 			            	</a>
 			            </li>
@@ -40,8 +40,14 @@
 			            </li>
 			        
 			            <li class="menu-item">
-			            	<a href="/Github"  class="menu-item-link">
-			            		社交
+			            	<a href="/tags"  class="menu-item-link">
+			            		标签
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/about"  class="menu-item-link">
+			            		关于
 			            	</a>
 			            </li>
 			        
@@ -50,7 +56,8 @@
 	    </div>
     </nav>	    
 </header>
-		<div class="wbox" >  
+		<div class="bodyheight">
+		   <div class="wbox" >  
     <div class="container">
       <img src="css/images/banners.jpg" class="img-responsive"/>
     </div>	
@@ -80,7 +87,11 @@
  			<h2>崔天河</h2>
  			<div class="btn btn-success">美文摘录</div>
  			<div class="btn btn-success">留言部落</div>
- 			<div class="btn btn-success">博主信息</div>
+ 			<div class="btn btn-success">
+ 				<a href="about" class="btnA">
+ 					博主信息
+ 				</a>
+ 			</div>
  			<div class="motto">
  				<h3>座右铭</h3>
  				<p>
@@ -94,141 +105,213 @@
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (14)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/hello-world/">
+					   			新的开始！
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
 					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (13)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/route/">
+					   			angular-ui-路由
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (12)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/ng_directive/">
+					   			自定义指令directive
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		<p>代码示例:<br>var m = angular.module(‘app’,[]);<br>m.directive(‘mystyle’,[function(){<br>    return {<br>    restrict:”A”,<br>    template:”我爱打水”,<br>    replace:true<br>}<br>}])<br>解析：directive的参数：(1)指令名称<br>                       (2)自定义处理函数，返回的是Json数据<br>属性：<br>      (1)restict:指令的表现形式(A(atrr)表示属性，E(elemt)：元素，C:class)<br>      (2)template:指令在页面的内容<br>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (11)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/h1/">
+					   			回忆常见的H5标签
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		<p>(1) h5标签： 独占一行，数字越小，字体越大，有标题的语义。<br>(2) p标签：  独占一行，表述段落<br>(3) div标签：独占一行，没有语义，可以设置宽高。<br>(4) 其他独占一行的标签还有：hr(水平线) br(换行)<br>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (10)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/css3/">
+					   			CSS3记录
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		<p>(1)目标伪类选择器<br>   div:target{<br>   width:200px;<br>   height:200px;<br>   background:pink;<br>   }<br>   对于上述css样式，只有当div处于目标选中状态时，才有效，由此可看出元素并不是一定是目标元素，只有被选定时，才是。<br>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (9)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/css1/">
+					   			复习css
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">优先级的大小：!important(不能继承)&gt;行内式&gt;id选择器&gt;类选择器&gt;标签选择器&gt;继承</div><div class="line">技巧：无论多少个标签都比不过一个类，无论多少个类都比不过一个id,依此类推！</div></pre></td></tr></table></figure>
+<p>(1)css具有层叠性，在优先级相同的情况下，后面的样式会覆盖前面的。<br>(2)css具有继承性，子元素有可能能继承父元素的的某些属性，如color </p>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (8)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/boxmodel/">
+					   			盒子模型
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		<p>margin塌陷现象<br>   如果一个大盒子中包含一个小盒子，在给小盒子设置margin-top时，大盒子也会一起向下平移。<br>解决方案：<br>(1)给大盒子加一个边框<br>(2)给大盒子设置一个overflow属性<br>(3)添加浮动<br>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (7)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/bootstrap1/">
+					   			初始bootstrap
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		<p>在boostrap框架中，大多数的标签的样式都被重新定义了，而不是采用浏览器默认的样式。同时，也封装了很多常用的样式类(class)，在开发时，可直接给标签添加类名即可。以下是常见的类。</p>
+<p></p><h2>排版</h2><br>(1)text-left:  文本左对齐。  示例：&lt;标签 class=”text-left”&gt;我爱打水&lt;/标签&gt;<br>(2)text-center:  文本居中<br>(3)text-right:  文本右对齐<br>(4)list-unstyled: 移除默认样式 (主要对ul li 列表来说)<br>(5)list-inline:  将元素设置成内联样式(常用于制作导航栏)<br>
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (6)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/angularjs4/">
+					   			angularJs细节
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-10-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/13/hello-world - 副本 (5)/">新的开始！</a>
+					   		<a class="post-title-link" href="/2017/10/16/angularjs3/">
+					   			angularJs函数
+					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
+					   		
 					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a></li></ul>
+		                   	</button>
+	                    </div>
 				   </article>
 				
 			</section>
@@ -241,8 +324,9 @@
  	    </div>
 </div>
 	   
-	
-		<div class="nav navbar-default navbar-fixed-bottom footers">
+
+		</div>	
+		<div class="nav navbar-default footers">
  	<div class="container footer">
  		<div class="navbar-header">
  			 <span class="navbar-brand">友情连接</span>

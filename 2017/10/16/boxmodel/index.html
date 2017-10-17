@@ -1,0 +1,112 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/tags"  class="menu-item-link">
+			            		标签
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/about"  class="menu-item-link">
+			            		关于
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<div class="bodyheight">
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">盒子模型</h2>
+	</div>
+
+	<div class="post-content">
+		<p>margin塌陷现象<br>   如果一个大盒子中包含一个小盒子，在给小盒子设置margin-top时，大盒子也会一起向下平移。<br>解决方案：<br>(1)给大盒子加一个边框<br>(2)给大盒子设置一个overflow属性<br>(3)添加浮动<br><a id="more"></a><br>margin的外边距合并现象<br>    当两个盒子都设置margin-top和margin-bottom时，实际距离会取值<br>    为较大的一方。在实际运用中，常常将margin-bottom是为较大值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">浮动</div></pre></td></tr></table></figure></p>
+<p>浮动的特点：<br>(1)只影响他后面的元素<br>(2)浮动不占标准流位置<br>(3)浮动找浮动，不浮动找不浮动(既是两者紧挨着)<br>(4)浮动显示的位置与原本不浮动的位置是对应的<br>(5)浮动会改变元素的显示方式(设置浮动后，可设置元素的宽高)<br>清浮动的解决方法：<br>(1)给有浮动的元素的父元素添加overflow：hidden<br>(2)给有浮动的元素的父元素添加一个伪类，具体代码如下：</p>
+<blockquote>
+<ul>
+<li>.clearfix:after{</li>
+<li>content:””;//添加内容为空</li>
+<li>height:0;//内容高度为0</li>
+<li>line-height:0;//内容文本高度为0</li>
+<li>display:block;//将文本设置为块级元素</li>
+<li>clear:both;//清除浮动</li>
+<li>visibility:hidden;//将元素隐藏</li>
+<li>}</li>
+<li>.clear{</li>
+<li>zoom:1;//兼容ie6</li>
+<li>}</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">定位</div></pre></td></tr></table></figure>
+<p>(1)相对定位(relative)：如果设置相对定位，盒子将会在原来的位置上进行平移，设置相对定位的元素在页面上占据了位置即使没有脱离标准流。<br>(2)绝对定位(absolute):具有绝对定位的元素根据具有定位的父元素来定位(包含上上级元素)，如果都没有，这相对body来定位。绝对定位的元素在页面上不会占据了位置即是脱离标准流。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">在实际应用中，一般父元素用相对定位，子元素用绝对定位。</div></pre></td></tr></table></figure></p>
+<p>(3)固定定位(fixed):不管页面多大，固定定位永远是相对于浏览器的边框来说的。固定定位的元素在页面上不会占据了位置即是脱离标准流。</p>
+
+	</div>
+</article>
+		</div>	
+		<div class="nav navbar-default footers">
+ 	<div class="container footer">
+ 		<div class="navbar-header">
+ 			 <span class="navbar-brand">友情连接</span>
+ 		</div>
+ 		<ul class="nav navbar-nav">
+ 			<li>
+ 				<a href="http://39.108.142.1//myBlog/home.php/home/index/index">斌哥博客</a>
+ 			</li>
+ 			<li>
+ 				<a href="https://blog.shanamaid.top/">娜酱骑士团</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ </div>
+ 
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/tags"  class="menu-item-link">
+			            		标签
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/about"  class="menu-item-link">
+			            		关于
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<div class="bodyheight">
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">复习css</h2>
+	</div>
+
+	<div class="post-content">
+		<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">优先级的大小：!important(不能继承)&gt;行内式&gt;id选择器&gt;类选择器&gt;标签选择器&gt;继承</div><div class="line">技巧：无论多少个标签都比不过一个类，无论多少个类都比不过一个id,依此类推！</div></pre></td></tr></table></figure>
+<p>(1)css具有层叠性，在优先级相同的情况下，后面的样式会覆盖前面的。<br>(2)css具有继承性，子元素有可能能继承父元素的的某些属性，如color </p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">注意：(1) a标签不能继承父元素的color属性，如果一定要修改a标签的color，直接作用于a标签。</div><div class="line">(2) h标签的大小不能继承。</div><div class="line">(3) div的高度如果不设置，由内容决定(没有内容，高度为0)，宽度默认由父元素继承过来。</div></pre></td></tr></table></figure>
+<p>关于css的继承性问题。<br>可以继承的属性大概有：text-,font-,line-开头的属性，color。</p>
+<p>(3)三种居中方式：text-align:容器内文字(行内，行内块级元素)居中，margin:0 auto:容器自身居中，line-height:垂直居中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">常见的css属性</div></pre></td></tr></table></figure></p>
+<p>(1)text-indent:设置首行缩进<br>(2)text-align:设置文本的位置，可取值有center,left,right<br>(3)text-decoration:设置文本的装饰，取值：none,underline<br>(4)border-collapse(去掉单元格间的间隙):collapse 常用于处理table标签<br>(5)visibility:设置元素的可见性 取值：visible，hidden<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">元素的显示方式</div></pre></td></tr></table></figure></p>
+<p>(1) 行内元素(display：inline)：一行显示多个，宽高由内容决定，不能设置宽高(a,span)<br>(2) 块级元素(display：block)：独占一行，可以设置宽高 (p,h,div,ul,li,dl,dt,dd)<br>(3) 行内块级元素(display:inline-block)：inline-block：一行显示多个，可以设置宽高 (img,input)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a标签有四个状态(伪类)：link（链接），visited（已访问）,hover（悬停），active（激活）</div></pre></td></tr></table></figure></p>
+<p>关于基线和底线对齐方式的问题(出现间隙)的解决方法：<br>(1)设置body的font-size为0<br>(2)将元素设为块级元素</p>
+
+	</div>
+</article>
+		</div>	
+		<div class="nav navbar-default footers">
+ 	<div class="container footer">
+ 		<div class="navbar-header">
+ 			 <span class="navbar-brand">友情连接</span>
+ 		</div>
+ 		<ul class="nav navbar-nav">
+ 			<li>
+ 				<a href="http://39.108.142.1//myBlog/home.php/home/index/index">斌哥博客</a>
+ 			</li>
+ 			<li>
+ 				<a href="https://blog.shanamaid.top/">娜酱骑士团</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ </div>
+ 
+	</body>
+</html>

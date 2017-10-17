@@ -1,0 +1,95 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/tags"  class="menu-item-link">
+			            		标签
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/about"  class="menu-item-link">
+			            		关于
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<div class="bodyheight">
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">自定义指令directive</h2>
+	</div>
+
+	<div class="post-content">
+		<p>代码示例:<br>var m = angular.module(‘app’,[]);<br>m.directive(‘mystyle’,[function(){<br>    return {<br>    restrict:”A”,<br>    template:”我爱打水”,<br>    replace:true<br>}<br>}])<br>解析：directive的参数：(1)指令名称<br>                       (2)自定义处理函数，返回的是Json数据<br>属性：<br>      (1)restict:指令的表现形式(A(atrr)表示属性，E(elemt)：元素，C:class)<br>      (2)template:指令在页面的内容<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">template的内容还可以以函数的形式表现，例如：</div><div class="line">  template:<span class="keyword">function</span>(elem,attr)&#123;</div><div class="line">     <span class="built_in">return</span> <span class="string">"&lt;span style='color:"</span>+attr[<span class="string">'color'</span>]+<span class="string">"'&gt;"</span>+$(elem).html()+<span class="string">"&lt;/span&gt;"</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>(3)replace:当为true时，将template的值替换原本的标签 如div，为false时，将template的值插入原本的标签里</p>
+<p>-&gt;在使用replace:true时，template的值替换原本的标签的内容，要想保留，此时要用到transclude.<br>(4)transclude:true   作用如上所述，需要注意的是，要保留原本的标签的内容，还需将template的值修改，例如：template:”<span>我爱打水<div ng-tansclude="">要保留原本的标签的内容</div></span>“<br>(5)templateUrl:”anguler/mystyle.html”  引入外部模版。外部模版的命名一般与自定义指令名相同，便于维护。<br>(6)scope(独立作用域):当为true时，自定义指令的数据更新不影响控制器的数据<br>   1&gt; 作用域的属性与父作用域的属性进行双向绑定，任何一方的修改均影响到对方，这是最常用的方式；例如：scope:{color=”=color”}<br>   2&gt; @ 作用域的属性与父作用域的属性进行单向绑定，即“Isolate”作用域只能读取父作用域的值，并且该值永远的String类型；例如：scope:{color=”@color”}<br>   3&gt; &amp; 作用域把父作用域的属性包装成一个函数，从而以函数的方式读写父作用域的属性，包装方法是$parse，详情请见API-$parse；例如：scope:{color=”&amp;color”}<br>(7)controller:指令中的控制器与模型中的控制器用法差不多一样<br>(8)</p>
+
+	</div>
+</article>
+		</div>	
+		<div class="nav navbar-default footers">
+ 	<div class="container footer">
+ 		<div class="navbar-header">
+ 			 <span class="navbar-brand">友情连接</span>
+ 		</div>
+ 		<ul class="nav navbar-nav">
+ 			<li>
+ 				<a href="http://39.108.142.1//myBlog/home.php/home/index/index">斌哥博客</a>
+ 			</li>
+ 			<li>
+ 				<a href="https://blog.shanamaid.top/">娜酱骑士团</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ </div>
+ 
+	</body>
+</html>

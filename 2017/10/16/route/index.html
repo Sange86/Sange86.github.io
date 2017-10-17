@@ -57,26 +57,22 @@
     </nav>	    
 </header>
 		<div class="bodyheight">
-		   <div class="container postArc">
-	<section class="archive">
-		<ul class="post-archive clearfix">
-			
-			  <li class="post-item">
-			  	<div class="post-date">
-			  		2017-10-16
-			  	</div>
-			  	<div class="postright">
-				  	<a class="post-title" href="/2017/10/16/hello-world/">
-				  		新的开始！
-				  	</a>
-			  	</div>
-			  </li>
-			
-		</ul>
-	</section>
-</div>
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">angular-ui-路由</h2>
+	</div>
 
+	<div class="post-content">
+		<p>AngularJS 路由允许我们通过不同的 URL 访问不同的内容。通过 AngularJS 可以实现多视图的单页Web应用（single page web application，SPA）<br>也就是说可以实现在不刷新页面的情况下，访问不同的模块，类似于选项卡。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Angular-ui-route的基本用法</div></pre></td></tr></table></figure></p>
+<p>(1)定义angular模块，并将ui-route模块注入其中，类似于C++中的继承<br>   var m = angular.module(“app”,[‘ui.router’]);<br>(2)初始化路由，将$stateProvider服务和$urlRouterProcider服务注入。此部分类似于C++中的构造函数。<br>   m.config([“$stateProvider”,”$urlRouterProvider”,function($stateProvider,$urlRouterProvider){<br>        //默认路由<br>        $urlRouterProvider.otherwise(‘/th’);<br>        //定义路由规则<br>        $stateProvider<br>            //规则1：<br>            .state(‘default’,{<br>              url:’/th’,<br>              template:”页面内容”<br>              //也可以设置模版文件<br>              templateUrl:’xx.html’<br>            })<br>            //规则2：<br>            .state(‘home’,{<br>              url:’/home’,<br>              template:”首页”<br>              //也可以添加控制器，方法跟自定义指令一样<br>              controller:[“$scope”,function($scope){<br>                 $scope.name=”我爱打水”;<br>              }]<br>              也可以引用外部的控制器  如controller:’ctrl’<br>            })<br>   }])</p>
 
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">

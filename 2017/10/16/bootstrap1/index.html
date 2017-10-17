@@ -1,0 +1,103 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/tags"  class="menu-item-link">
+			            		标签
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/about"  class="menu-item-link">
+			            		关于
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<div class="bodyheight">
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">初始bootstrap</h2>
+	</div>
+
+	<div class="post-content">
+		<p>在boostrap框架中，大多数的标签的样式都被重新定义了，而不是采用浏览器默认的样式。同时，也封装了很多常用的样式类(class)，在开发时，可直接给标签添加类名即可。以下是常见的类。</p>
+<p></p><h2>排版</h2><br>(1)text-left:  文本左对齐。  示例：&lt;标签 class=”text-left”&gt;我爱打水&lt;/标签&gt;<br>(2)text-center:  文本居中<br>(3)text-right:  文本右对齐<br>(4)list-unstyled: 移除默认样式 (主要对ul li 列表来说)<br>(5)list-inline:  将元素设置成内联样式(常用于制作导航栏)<br><a id="more"></a><p></p>
+<p></p><h2>表格</h2><br>(1)table:   重定义表格大小或者其他样式<br>(2)table-striped ：给表格添加隔行着色效果. 需要注意的是：要在有table类的前提下使用时。<br>(3)table-bordered:  为表格加边框<br>(4)table-responsive:  设置为响应式表格<p></p>
+<p></p><h2>按钮</h2><br>(1)btn:   将元素设置为按钮对象<br>(2)btn-lg:    大号   改变按钮对象的尺寸大小<br>(3)btn-sm:    小号<br>(4)btn-xs:    超小号<br>(5)btn-block:  将按钮对象设置为块元素，占据一整行<br>(6)disabled:   禁用<p></p>
+<p></p><h2>表单和图片</h2><br>(1)form-control:  给表单元素框添加样式，显示方式为display:block,占一整行<br>(2)form-group:    给表单元素添加外边距<br>(3)form-line:   内联表单，让所有表单元素居于一行，作用于form标签<br>(4)input-group-addon:  表单合组，一般需要配合input-group使用  示例如下：<br>                &lt;标签 class=”input-group”&gt;<br>                    &lt;标签 class=”input-group-addon”&gt;￥&lt;/标签&gt;<br>                    &lt;标签input type=”text” class=”form-control” /&gt;<br>                &lt;/标签&gt;<br>(5)form-horizontal:表单水平排列  作用于form标签  一般需要col-sm-xx(1,2..10),control-lable的配合        control-label:表示与父元素样式同步<br>  示例如下：<br>      &lt;!form class=”form-horizontal”&gt;<br>         &lt;!div class=”form-group”&gt;<br>             &lt;!label class = “col-sm-2 control-label”&gt;昵称&lt;!/label&gt;<br>             &lt;!div class=”col-sm-10”&gt;<br>                &lt;!input type =”text” class = “form-control”/&gt;<br>             &lt;!/div&gt;<br>         &lt;!/div&gt;<br>      &lt;!/form&gt;<br>(6)checkbox &amp; checkbox-inline:占据一行的复选框 和内联复选框<br>(7)form-control:设置下拉列表<p></p>
+<p></p><h5>校验状态：has-success(成功状态)，has-error(失败状态)，has-warning(警告状态)</h5><br>(8)glpyhicon:添加额外的图标 常与glpyhicon-ok(glpyhicon-remove),form-control-feedback ,has-feedback一起使用<br>(9)img-rounded:将图片设置成圆角矩形<br>(10)img-circle:圆形处理<p></p>
+<h1 id="11-img-responsive-响应式处理，当窗口变化时，图片也跟着变化"><a href="#11-img-responsive-响应式处理，当窗口变化时，图片也跟着变化" class="headerlink" title="(11)img-responsive:响应式处理，当窗口变化时，图片也跟着变化"></a>(11)img-responsive:响应式处理，当窗口变化时，图片也跟着变化</h1><p></p><h4>其他</h4><br>(1)pull-left:左浮动<br>(2)pull-right:右浮动<br>(3)center-block:块级元素居中<br>(4)clearfix:清理浮动  示例：&lt;-div class=”clearfix”&gt;&lt;-/div&gt;,这个div放在需要清理浮动区块的前面即可。<br>(5)breadcrumb:面包屑组件类，一般用于制作导航分类行  &lt;.ul class=”breadcrumb”&gt;&lt;./ul&gt;<br>(6)pagination:分页栏<br>(7)pager:上下分页栏<br>(7)lable lable-default:标签<br>(8)badge: 徽章，一般运用于信息提醒功能，如未读信息的条数，评论数等.<br>(9)alert  alert-success:警告框组件。示例<br>   &lt;.div class=”alert alert-success”&gt;<br>   这是一个成功警告框。<br>   &lt;.button class = “close” data-dismiss=”alert”&gt;<br>   &lt;.span&gt;&amp;timse&lt;./span&gt;<br>   &lt;./button&gt;<br>   &lt;./div&gt;<p></p>
+<p></p><h4>按钮组件<br>(1)dropdown:将元素设置为下拉项。常与dropdown-menu,data-toggle=”dropdown”一起使用。具体示例如下：<br>&lt;.div clasee=”dropdown”&gt;<br>&lt;.button&gt;<br>    下拉菜单<br>&lt;./button&gt;<br>&lt;.ul&gt;<br>&lt;.li&gt;首页&lt;./li&gt;<br>                &lt;.li&gt;新闻&lt;./li&gt;<br>                &lt;.li&gt;游戏&lt;./li&gt;<br>                &lt;.li&gt;帮助&lt;./li&gt;<br>&lt;./ul&gt;<br>&lt;./div&gt;<br>(2)btn-group:按钮群组，将多个按钮元素安置在一个盒子内，左右按钮元素具有圆角效果<p></p>
+<p></p><h4>导航组件</h4><br>(1)nav:去掉默认的line-style<br>(2)nav-tabs:标签式<br>(3)nav-pills：胶囊式<br>(4)nav-stacked:垂直式  在具有nav-pills的前提下有效<p></p>
+<p></p><h4>data-</h4><br>(1)data-toggle:触发类型(元素的切换，如：切换成下拉列表  切换为模态框等<br>)<br>(2)data-target:触发节点(元素切换目标)<br>(3)data-dismiss:关闭元素<br>(4)data-backdrop:默认值为true,表示背景存在黑灰色透明遮罩，且单击空白背景可关闭弹窗。为false时，则相反。为static时，背景存在黑灰色透明遮罩，且单击空白背景不可关闭弹窗。<br>(5)data-keyboard:为true时，按esc键，可以关闭弹窗，false则相反<br>(6)data-show:为true时，初始化时默认显示弹窗，false则相反<p></p>
+<p>(7)data-spy:设置为scroll,将设置容器滚动监听事件<br>(8)data-offset:默认值为0，固定距离内容滚动容器10像素以内。就高亮显示所对应的菜单</p>
+</h4>
+	</div>
+</article>
+		</div>	
+		<div class="nav navbar-default footers">
+ 	<div class="container footer">
+ 		<div class="navbar-header">
+ 			 <span class="navbar-brand">友情连接</span>
+ 		</div>
+ 		<ul class="nav navbar-nav">
+ 			<li>
+ 				<a href="http://39.108.142.1//myBlog/home.php/home/index/index">斌哥博客</a>
+ 			</li>
+ 			<li>
+ 				<a href="https://blog.shanamaid.top/">娜酱骑士团</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ </div>
+ 
+	</body>
+</html>

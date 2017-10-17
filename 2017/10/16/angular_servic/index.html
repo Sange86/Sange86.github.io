@@ -1,0 +1,98 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我爱打水</title>
+    <!--<link rel="stylesheet" href="../../source/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="../../source/css/test.css" />-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<header class="header">
+    <nav class="nav navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+         			<a href="/" class="navbar-brand">我爱打水</a>
+         			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapse">
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         				<span class="icon-bar"></span>
+         			</button>
+            </div>
+	        <div class="collapse navbar-collapse" id="navbarcollapse">
+			    <ul class="nav navbar-nav navbar-right navul">
+			        
+			            <li class="menu-item">
+			            	<a href="/"  class="menu-item-link">
+			            		主页
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/Archives"  class="menu-item-link">
+			            		归档
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/tags"  class="menu-item-link">
+			            		标签
+			            	</a>
+			            </li>
+			        
+			            <li class="menu-item">
+			            	<a href="/about"  class="menu-item-link">
+			            		关于
+			            	</a>
+			            </li>
+			        
+			    </ul>
+			</div>
+	    </div>
+    </nav>	    
+</header>
+		<div class="bodyheight">
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-10-16
+		</span>
+	</div>
+	<div class="post-title">
+		<h2 class="title">angularjs服务</h2>
+	</div>
+
+	<div class="post-content">
+		<p>(1)$sce:安全处理html数据。在scope里面的数据中，有时存在标签的字符串数据($scope.data =”&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”),如果直接进行显示操作，结果仍然是&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”，而不是“我爱打水”，要想得到后者，则要注入$sce服务。具体事例如下：</p>
+<a id="more"></a>
+<p>&lt;标签 ng-bind-html=”data|mystyle”&gt;<br>    {data}<br>&lt;/标签&gt;<br>var m = angular.module(“app”,[]);<br>m.filter(“mystyle”,[“$sce”,function($sce){<br>    return function(data){<br>        return $sce.trustAsHtml(data);<br>    }<br>}])<br>m.controller(“ctrl”,[“$scope”,function($scope){<br>    $scope.data =”&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”<br>}]);<br>(2)$cacheFactory服务：创建一个用来存储缓存对象的服务。需要注意的是，cacheFactory与sessionstorage一样，当页面刷新后，将不再存在。具体用法如下：<br>            m.controller(“ctrl”,[“$scope”,”$cacheFactory”,function($scope,$cacheFactory){<br>                 var mCache = $cacheFactory(“myCache”);//创建一张名为myCache的表<br>                 mCache.put(‘wed’,{name:’我爱打水’,title:’cache’});//往表里添加数据<br>                 $scope.data = mCache.get(‘wed’).name;//读取表中的数据<br>                 mCache.remove(‘wed’);//删除表中的数据<br>                 //mCache.removeAll();<br>                 //mCache.destory();<br>            }]);<br>            //在不同的控制器中，也可以使用同一张缓存数据表，此时需要获取缓存数据表，而不是创建数据表<br>               var  mcahe2 = $cacheFactory.get(‘myCache’);<br>               //Todo…..<br>(3)$http服务：获取后台数据。示例图下：<br>         $http({<br>              method:’get’//获取数据方式<br>              url:’xx.php’//数据的来源<br>              cache:true//请求缓冲操作，减少重复获取xx.php次数，减轻后台压力，这是对于重复数据来说的。<br>         }).then(function(response){//正确读取数据后的处理函数</p>
+<pre><code>},function(response){//错误读取数据后的处理函数
+})
+</code></pre><p>(4)自定义服务：为了方便代码的维护，提高编程的可读性，常常需要自定义一些服务或者将某些服务封装。有很多方法进行自定义服务。以下介绍factory()方法。基本代码示例如下：<br>           m.factory(“自定义服务名”,[“需要注入的某些服务，如$http”,function($http){<br>                return{<br>                    get:function(){<br>                        Todo:…<br>                        //return $http({url:”userdefineServer.php”});<br>                    }<br>                }<br>            }]);</p>
+
+	</div>
+</article>
+		</div>	
+		<div class="nav navbar-default footers">
+ 	<div class="container footer">
+ 		<div class="navbar-header">
+ 			 <span class="navbar-brand">友情连接</span>
+ 		</div>
+ 		<ul class="nav navbar-nav">
+ 			<li>
+ 				<a href="http://39.108.142.1//myBlog/home.php/home/index/index">斌哥博客</a>
+ 			</li>
+ 			<li>
+ 				<a href="https://blog.shanamaid.top/">娜酱骑士团</a>
+ 			</li>
+ 		</ul>
+ 	</div>
+ </div>
+ 
+	</body>
+</html>

@@ -1,5 +1,14 @@
+html{
+	height: 100%;
+}
 body{
 	background: #c0c0c0;
+	height: 100%;
+}
+.bodyheight{
+	/*height: 100%;*/
+	/*position: relative;*/
+	min-height: 100%;
 }
 .fl{
 	float: left;
@@ -8,7 +17,7 @@ body{
    float: right;
 }
 .header{
-	height: 80px;
+	height: 50px;
 	background: #393d49;
     display: flex;
     align-items: baseline;
@@ -53,6 +62,9 @@ body{
 	height: 50px;
 	background: #204D74;
 }
+.aboutmain{
+	margin-top: 50px;
+}
 .main{
 	margin-top: 50px;
 }
@@ -62,6 +74,9 @@ body{
 	background: #F5F5F5;
 	margin-bottom: 30px;
 	text-align: center;
+}
+.pageLeft .btnA{
+	color: #FFFFFF;
 }
 .pageRight{
 	/*width: 80%;*/
@@ -129,4 +144,78 @@ body{
 	height: 50px;
 	padding-left: 35%;
 	padding-top: 3px;
+}
+/*归档样式*/
+.postArc{
+	min-width: 540px;
+}
+.archive{
+	margin: 1em auto;
+	padding: 20px 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 2px #ddd;
+}
+.archive .post-archive{
+	list-style: none;
+}
+.archive .post-archive .post-item{
+	background: palevioletred;
+	float: left;
+	display: block;
+	width: 240px;
+	height: 80px;
+	border-radius: 10px;
+	margin: 10px;
+	text-align: center;
+	padding-left: 10px;*/
+}
+.archive .post-archive .post-date{
+	float: left;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: blue;
+	border-radius: 25px;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	margin-top: 15px;
+}
+.archive .post-archive .postright{
+	float: right;
+	width: 160px;
+	height: 80px;
+	line-height: 80px;
+}
+.archive .post-archive .post-title{
+	font-size: 17px;
+	text-align:left;
+	display: block;
+	height: 80px;
+}
+/*文章标签*/
+.tagsBg{
+	margin-top: 25px ;
+	background: #FFFFFF;
+}
+.article-tag-list{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	list-style: none;
+	text-align: center;
+}
+.article-tag-list-item a{
+	/*padding: 10px;*/
+	/*color: white;*/
+}
+.tagstotall a{
+	display: block;
+	list-style: none;
+	background: pink;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
 }
