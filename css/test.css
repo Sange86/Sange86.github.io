@@ -219,3 +219,40 @@ body{
 	padding: 10px;
 	border-radius: 10px;
 }
+/*关于我*/
+.aboutInfo{
+	background: #1A3D49;
+	opacity: 0.5;
+}
+.aboutInfo h1{
+	opacity: 1.0;
+	color: white;
+	text-align: center;
+}
+.aboutInfo .aboutHead{
+    margin: 30px 0px;
+    text-align: center;
+
+}
+.aboutInfo h4{
+	opacity: 1.0;
+	color: white;
+	text-align: center;
+}
+.baseInfo{
+
+	height: 36px;
+}
+.baseInfo div{
+	height: 100%;
+	line-height: 36px;
+	box-sizing: border-box;
+	color: white;
+	border-bottom: 1px solid yellow;
+    border-color: rgba(250,255,0,0.5)
+}
+.aboutContent{
+	margin-top: 20px;
+	color: white;
+	font-size: 16px;
+}
