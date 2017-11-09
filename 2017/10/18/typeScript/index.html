@@ -62,16 +62,15 @@
 		   <article class="post container">	
 	<div class="post-meta">
 		<span class="post-time">
-			2017-10-16
+			2017-10-18
 		</span>
 	</div>
 	<div class="post-title">
-		<h2 class="title">回忆常见的H5标签</h2>
+		<h2 class="title">初始typeScript</h2>
 	</div>
 
 	<div class="post-content">
-		<p>(1) h5标签： 独占一行，数字越小，字体越大，有标题的语义。<br>(2) p标签：  独占一行，表述段落<br>(3) div标签：独占一行，没有语义，可以设置宽高。<br>(4) 其他独占一行的标签还有：hr(水平线) br(换行)<br><a id="more"></a><br>(5) b s u i标签：宽高由内容决定，没有语义。<br>(6) span标签：宽高由内容决定，默认情况下，不可以设置宽高。<br>(7) img标签：宽高由内容决定，可以设置宽高。<br>(8) a标签：宽高由内容决定，可以设置宽高。<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">注意：a链接，默认的打开方式为原窗口。当整个网站的链接需要在新窗口下打开时，</div><div class="line">      可用base标签统一设置为〈base target=<span class="string">"blank"</span>〉</div></pre></td></tr></table></figure></p>
-<p>(9) table标签： 常用于页面布局，但现在已经不流行了，目前用div + css进行布局<br>(10) form表单标签：用于接收用户输入信息。<br>    其中包含input标签：类型(type) 有text(文本)，password(密码)，<br>                       radio(单选)&lt;需要设置相同的名字&gt;，button(按钮)，常用<br>                       来提交，重置表单信息等。checkbox(复选框)，flie(文件)<br>                       用于上传文件，照片等。<br>            select标签：表示下拉列表。其中下拉项用option标签表示。<br>(11) ul li标签：列表 常用于页面布局</p>
+		<p>&lt;数据类型&gt;<br>1 void – 空  一般用于返回值<br>2 null –null  只能是null<br>3 undefined –undefined  只有一种值undefined<br>4 enum(枚举)<br>    *有限的可能性(有限个数)<br>5 any –变体变量  可赋值任何类型数据<br><a id="more"></a><br>6 类型推测原则(根据初始值推测变量类型)–数组也一样<br>var a;等价与var a:any<br>var a=12;等价与var a:number=12;<br>8 联合类型<br>  例如：var a:number|string<br>  变量a可以是number类型，也可以string类型<br>  &lt;函数&gt;<br>  声明：typeScript是强类型语言，函数参数的个数和类型必须一致<br>  外部变量声明：<br>  declare var $  告诉编译器 $是在外部什么了，目前无需处理<br>可选参数<br>function add(a:number,b:number,c?:number){}<br>c后面加了?  表示c为可选参数，在调用时，可以不传值。  </p>
 
 	</div>
 </article>

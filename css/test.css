@@ -5,6 +5,13 @@ body{
 	background: #c0c0c0;
 	height: 100%;
 }
+#can{
+    background: pink;
+    position: absolute;
+    /*width: 900px;*/
+    /*height: 600px;*/
+    z-index:-3;
+}
 .bodyheight{
 	/*height: 100%;*/
 	/*position: relative;*/
