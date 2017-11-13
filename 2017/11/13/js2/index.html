@@ -59,17 +59,32 @@
 </header>
 		<canvas id="can" ></canvas>
 		<div class="bodyheight">
-		   <div class="container tagsBg">
-	<div class="tagstotall">
-	  
-	    <a href="/tags/angular2/" style="font-size: 14px;">angular2</a> <a href="/tags/angularJS/" style="font-size: 18.67px;">angularJS</a> <a href="/tags/angularJs/" style="font-size: 23.33px;">angularJs</a> <a href="/tags/angular-route/" style="font-size: 14px;">angular_route</a> <a href="/tags/angularjs/" style="font-size: 14px;">angularjs</a> <a href="/tags/angularjs服务/" style="font-size: 14px;">angularjs服务</a> <a href="/tags/css/" style="font-size: 14px;">css</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/float/" style="font-size: 14px;">float</a> <a href="/tags/html5/" style="font-size: 14px;">html5</a> <a href="/tags/javascript/" style="font-size: 28px;">javascript</a> <a href="/tags/jquery/" style="font-size: 18.67px;">jquery</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/typeScript/" style="font-size: 14px;">typeScript</a> <a href="/tags/日志/" style="font-size: 14px;">日志</a>
-	    <!--<button class="btn btn-success tagsbtn">-->
-	      <!--<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a><span class="article-tag-list-count">3</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a><span class="article-tag-list-count">4</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeScript/">typeScript</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a><span class="article-tag-list-count">1</span></li></ul>-->
-	    <!--</button>-->
-	  
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-11-13
+		</span>
 	</div>
-</div>
+	<div class="post-title">
+		<h2 class="title">javascript&lt;二&gt;</h2>
+	</div>
 
+	<div class="post-content">
+		<p>map 映射 通过键值对来存储数据<br>可通过set,get来添加获取数据<br>var score = new Map();<br>score.set(“cui”,86);<br>score.get(“cui”);  //86<br>score.delete(“cui”);//移除<br>score.has(“cui”);//是否存在</p>
+<p>Set  常用做集合=&gt;存储一组不重复的数据<br>var A = new Set();<br>var B = new Set([1,2,3]);<br>var C = new Set([1,2,4,5,5,’5’]);<br>alert(C); //重复元素在Set中自动被过滤：<br>可通过add添加元素<br>C.add(6);<br>C.delete(4);//删除元素</p>
+<p>rest  ES6新特性<br>表示参数中剩余的值  rest参数只能写在最后，前面用…标识<br>function restArr(a,b,…rest){<br>    console.log(a);//1<br>    console.log(b);//2<br>    console.log(rest);//3,4,5<br>}<br>restArr(1,2,3,4,5);</p>
+<p>JavaScript的函数可以嵌套，此时，内部函数可以访问外部函数定义的变量，反过来则不行<br>function foo() {<br>    var x = 1;<br>    function bar() {<br>        var y = x + 1; // bar可以访问foo的变量x!<br>    }<br>    var z = y + 1; // ReferenceError! foo不可以访问bar的变量y!<br>}</p>
+<p>‘use strict’严格模式<br>严格模式下，变量都必须先用var命令声明，然后再使用</p>
+<p>解构赋值  ES6新特性<br>将一组对象以结构相同对象的方式存储起来。<br>常用于将两个对象一一映射，获取数据时，不再需要根据下标来获取了<br>var [x,y,z] = [‘I’,’love’,’water’]<br>let [x, [y, z]] = [‘hello’, [‘JavaScript’, ‘ES6’]];</p>
+<p>apply</p>
+<p>虽然在一个独立的函数调用中，根据是否是strict模式，this指向undefined或window，不过，我们还是可以控制this的指向的！<br>要指定函数的this指向哪个对象，可以用函数本身的apply方法，它接收两个参数，第一个参数就是需要绑定的this变量，第二个参数是Array，表示函数本身的参数。<br>用apply修复getAge()调用：<br>function getAge() {<br>    var y = new Date().getFullYear();<br>    return y - this.birth;<br>}<br>var xiaoming = {<br>    name: ‘小明’,<br>    birth: 1990,<br>    age: getAge<br>};<br>xiaoming.age(); // 25<br>getAge.apply(xiaoming, []); // 25, this指向xiaoming, 参数为空<br>另一个与apply()类似的方法是call()，唯一区别是：<br>apply()把参数打包成Array再传入；<br>call()把参数按顺序传入。</p>
+<p>在处理一组数据时，如果需要将数据按一定的方法处理时，可以使用map()来处理，而无需使用for循环语句<br>function pow(x) {<br>    return x * x;<br>}<br>var arr = [1, 2, 3, 4];<br>var newArr = arr.map(pow);<br>console.log(newArr)// // [1, 4, 9, 16]</p>
+<p>reduce  常用于将一组数据求和处理<br>var arr = [1,2,3,4];<br>arr.reduce(function(x,y){<br>    return x+y;<br>});<br>有关array的函数还有filter,sort</p>
+<p>Date<br>常见的获取系统当前时间的方法如下：<br>var nowTime = new Date();<br>nowTime.getFullYear();//获取年份<br>nowTime.getMonth();//获取月份，注意范围是0-122<br>nowTime.getDate();//获取几号<br>nowTime.getDay();//获取星期几<br>nowTime.getHours();//小时<br>nowTime.getMinutes();//分<br>nowTime.getSeconds();//秒<br>nowTime.getMilliseconds();//毫秒<br>nowTime.getTime();//以number表示的时间戳</p>
+<p>正则表达式  一种用来匹配字符串的表达式。<br>创建方法:<br>第一种方式是直接通过/正则表达式/写出来.<br>第二种方式是通过new RegExp(‘正则表达式’)创建一个RegExp对象。<br>var re1 = /ABC-001/<br>var re2 = new RegExp(“ABC\-001”);<br>匹配方法：<br>RegExp对象通过test()来进行匹配<br>var re = /\d{3}-\d{3,8}/;<br>re.test(“072-5200”);</p>
+
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">

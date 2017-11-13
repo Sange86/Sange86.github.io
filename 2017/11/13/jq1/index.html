@@ -59,17 +59,29 @@
 </header>
 		<canvas id="can" ></canvas>
 		<div class="bodyheight">
-		   <div class="container tagsBg">
-	<div class="tagstotall">
-	  
-	    <a href="/tags/angular2/" style="font-size: 14px;">angular2</a> <a href="/tags/angularJS/" style="font-size: 18.67px;">angularJS</a> <a href="/tags/angularJs/" style="font-size: 23.33px;">angularJs</a> <a href="/tags/angular-route/" style="font-size: 14px;">angular_route</a> <a href="/tags/angularjs/" style="font-size: 14px;">angularjs</a> <a href="/tags/angularjs服务/" style="font-size: 14px;">angularjs服务</a> <a href="/tags/css/" style="font-size: 14px;">css</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/float/" style="font-size: 14px;">float</a> <a href="/tags/html5/" style="font-size: 14px;">html5</a> <a href="/tags/javascript/" style="font-size: 28px;">javascript</a> <a href="/tags/jquery/" style="font-size: 18.67px;">jquery</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/typeScript/" style="font-size: 14px;">typeScript</a> <a href="/tags/日志/" style="font-size: 14px;">日志</a>
-	    <!--<button class="btn btn-success tagsbtn">-->
-	      <!--<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a><span class="article-tag-list-count">3</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a><span class="article-tag-list-count">4</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeScript/">typeScript</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a><span class="article-tag-list-count">1</span></li></ul>-->
-	    <!--</button>-->
-	  
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-11-13
+		</span>
 	</div>
-</div>
+	<div class="post-title">
+		<h2 class="title">Jquery&lt;一&gt;</h2>
+	</div>
 
+	<div class="post-content">
+		<p>JQuery操作DOM</p>
+<p>text() //获取当前节点里的文本<br>html()  //跟text()差不多  都是获取节点文本<br>以上两者在不带参数时，具有获取文本的功能，但带上参数时，这变成了修改节点文本的功能函数。</p>
+<p>在JQuery中，如果想修改某个节点的css样式，可通过css(‘name’,’value’)来修改。<br>css() 一样可区分带参数和不带参数的。用法跟text()一样。<br>addClass(“value”) //为某个节点添加类<br>removeClass(“value”)//移除类</p>
+<p>关于节点的显示和隐藏，jq提供了hide()和show(),可以直接调用，无需关心display,<br>需要注意的是隐藏DOM节点并未改变DOM树的结构，它只影响DOM节点的显示。这和删除DOM节点是不同的</p>
+<p>attr()  获取并操纵节点属性  与之对应的是removeAttr()<br>div.attr(“name”);<br>div.attr(“width”,”250”);</p>
+<p>在jq中，也可以通过append()来添加新节点。用法跟原生js中的appendChild()差不多。<br>除了接受字符串，append()还可以传入原始的DOM对象，jQuery对象和函数对象：<br>// 创建DOM对象:<br>var ps = document.createElement(‘li’);<br>ps.innerHTML = ‘<span>Pascal</span>‘;<br>// 添加DOM对象:<br>ul.append(ps);<br>// 添加jQuery对象:<br>ul.append($(‘#scheme’));<br>// 添加函数对象:<br>ul.append(function (index, html) {<br>    return ‘<li><span>Language - ‘ + index + ‘</span></li>‘;<br>});</p>
+<p>在jq中，对事件的处理<br>on()方法<br>用来绑定一个事件，需要传入事件名称和对于的处理函数<br>a.on(‘click’,function(){<br>    //todo…<br>    alert(“loction”);<br>})</p>
+<p>ready事件  当页面被载入并且DOM树完全初始化后触发 相当于原生js中的 onload<br>ready仅作用于document对象。由于ready事件在DOM完成初始化后触发，且只触发一次，所以非常适合用来写其他的初始化代码。<br>$(document).on(‘ready’,function(){})等价于$(doucment).ready(function(){});<br>等价于$(function(){});</p>
+<p>取消绑定事件<br>function hello() {<br>    alert(‘hello!’);<br>}<br>a.click(hello); // 绑定事件<br>// 10秒钟后解除绑定:<br>setTimeout(function () {<br>    a.off(‘click’, hello);<br>}, 10000);</p>
+
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">

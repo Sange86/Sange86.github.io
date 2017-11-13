@@ -59,17 +59,31 @@
 </header>
 		<canvas id="can" ></canvas>
 		<div class="bodyheight">
-		   <div class="container tagsBg">
-	<div class="tagstotall">
-	  
-	    <a href="/tags/angular2/" style="font-size: 14px;">angular2</a> <a href="/tags/angularJS/" style="font-size: 18.67px;">angularJS</a> <a href="/tags/angularJs/" style="font-size: 23.33px;">angularJs</a> <a href="/tags/angular-route/" style="font-size: 14px;">angular_route</a> <a href="/tags/angularjs/" style="font-size: 14px;">angularjs</a> <a href="/tags/angularjs服务/" style="font-size: 14px;">angularjs服务</a> <a href="/tags/css/" style="font-size: 14px;">css</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/float/" style="font-size: 14px;">float</a> <a href="/tags/html5/" style="font-size: 14px;">html5</a> <a href="/tags/javascript/" style="font-size: 28px;">javascript</a> <a href="/tags/jquery/" style="font-size: 18.67px;">jquery</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/typeScript/" style="font-size: 14px;">typeScript</a> <a href="/tags/日志/" style="font-size: 14px;">日志</a>
-	    <!--<button class="btn btn-success tagsbtn">-->
-	      <!--<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a><span class="article-tag-list-count">3</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a><span class="article-tag-list-count">4</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeScript/">typeScript</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a><span class="article-tag-list-count">1</span></li></ul>-->
-	    <!--</button>-->
-	  
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-11-13
+		</span>
 	</div>
-</div>
+	<div class="post-title">
+		<h2 class="title">javascript&lt;一&gt;</h2>
+	</div>
 
+	<div class="post-content">
+		<p>substring() 返回指定索引区间的子串<br>var  s = “Hello, world”<br>s.substring(0,5)  //  从索引0开始到5（不包括5），返回’hello’<br>s.substring(7); // 从索引7开始到结束，返回’world’</p>
+<p>indexOf()会搜索指定字符串或者数组中元素出现的位置：<br>var s = ‘hello, world’;<br>s.indexOf(‘world’); // 返回7<br>s.indexOf(‘World’); // 没有找到指定的子串，返回-1</p>
+<p>var arr = [20,40,5,86,33]<br>arr.indexOf(40);//元素40的索引为1</p>
+<p>slice=&gt;</p>
+<p>slice()就是对应String的substring()版本，它截取Array的部分元素，然后返回一个新的Array<br>var arr = [1,2,3,5,8,9];<br>var a = arr.slice(0,3);<br>alert(a);   //a = [1,2,3]</p>
+<p>a = arr.slice(3);<br>alert(a);<br>如果不给slice()传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个Array<br>a = arr.slice();</p>
+<p>unshift和shift<br>如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉：</p>
+<p>splice<br>splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：</p>
+<p>concat<br>concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array,值得留意的是该方法并没有修改当前Array</p>
+<p>join<br>join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：<br>var arr = [‘A’, ‘B’, ‘C’, 1, 2, 3];<br>arr.join(‘-‘); // ‘A-B-C-1-2-3’</p>
+<p>prompt(“请输入一个数”);</p>
+
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">

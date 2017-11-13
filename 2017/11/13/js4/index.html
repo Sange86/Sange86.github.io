@@ -59,17 +59,26 @@
 </header>
 		<canvas id="can" ></canvas>
 		<div class="bodyheight">
-		   <div class="container tagsBg">
-	<div class="tagstotall">
-	  
-	    <a href="/tags/angular2/" style="font-size: 14px;">angular2</a> <a href="/tags/angularJS/" style="font-size: 18.67px;">angularJS</a> <a href="/tags/angularJs/" style="font-size: 23.33px;">angularJs</a> <a href="/tags/angular-route/" style="font-size: 14px;">angular_route</a> <a href="/tags/angularjs/" style="font-size: 14px;">angularjs</a> <a href="/tags/angularjs服务/" style="font-size: 14px;">angularjs服务</a> <a href="/tags/css/" style="font-size: 14px;">css</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/float/" style="font-size: 14px;">float</a> <a href="/tags/html5/" style="font-size: 14px;">html5</a> <a href="/tags/javascript/" style="font-size: 28px;">javascript</a> <a href="/tags/jquery/" style="font-size: 18.67px;">jquery</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/typeScript/" style="font-size: 14px;">typeScript</a> <a href="/tags/日志/" style="font-size: 14px;">日志</a>
-	    <!--<button class="btn btn-success tagsbtn">-->
-	      <!--<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a><span class="article-tag-list-count">3</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a><span class="article-tag-list-count">4</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeScript/">typeScript</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a><span class="article-tag-list-count">1</span></li></ul>-->
-	    <!--</button>-->
-	  
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-11-13
+		</span>
 	</div>
-</div>
+	<div class="post-title">
+		<h2 class="title">javascript&lt;四&gt;</h2>
+	</div>
 
+	<div class="post-content">
+		<p>操作DOM</p>
+<p>在实际中，我们往往需要往往需要修改DOM节点，可通过innerHTML来操作。但这往往会<br>修改当前节点的全部内容，为了不改变当前节点的内容，可以通过appendChild来把子节点添加到父节点上。<br>在使用appendChild时，注意区分谁是子节点，谁是父节点。//parent.appendChild(child)<br>insertBefore(parameter1,parameter2)//在指定标签元素前插入新的标签元素<br>  parameter1:  待插入的新标签元素<br>  parameter2:  指定的标签元素</p>
+<p>document.createElement(“p”)//通过js动态添加标签元素</p>
+<p>删除DOM<br>要删除一个节点，首先要获得该节点本身以及它的父节点，然后调用父节点的removeChild把自己删掉。<br>// 拿到待删除节点:<br>var self = document.getElementById(‘to-be-removed’);<br>// 拿到父节点:<br>var parent = self.parentElement;<br>// 删除:<br>var removed = parent.removeChild(self);<br>removed === self; // true  注意到删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置。</p>
+<p>canvas  画布</p>
+<p>操作画布的一些步骤如下：<br>获取画布控制句柄：getContext(‘2d’);<br>canvas的坐标原点的屏幕左上角</p>
+
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">

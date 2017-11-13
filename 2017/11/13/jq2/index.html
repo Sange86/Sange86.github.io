@@ -59,17 +59,30 @@
 </header>
 		<canvas id="can" ></canvas>
 		<div class="bodyheight">
-		   <div class="container tagsBg">
-	<div class="tagstotall">
-	  
-	    <a href="/tags/angular2/" style="font-size: 14px;">angular2</a> <a href="/tags/angularJS/" style="font-size: 18.67px;">angularJS</a> <a href="/tags/angularJs/" style="font-size: 23.33px;">angularJs</a> <a href="/tags/angular-route/" style="font-size: 14px;">angular_route</a> <a href="/tags/angularjs/" style="font-size: 14px;">angularjs</a> <a href="/tags/angularjs服务/" style="font-size: 14px;">angularjs服务</a> <a href="/tags/css/" style="font-size: 14px;">css</a> <a href="/tags/css3/" style="font-size: 14px;">css3</a> <a href="/tags/float/" style="font-size: 14px;">float</a> <a href="/tags/html5/" style="font-size: 14px;">html5</a> <a href="/tags/javascript/" style="font-size: 28px;">javascript</a> <a href="/tags/jquery/" style="font-size: 18.67px;">jquery</a> <a href="/tags/nodejs/" style="font-size: 14px;">nodejs</a> <a href="/tags/typeScript/" style="font-size: 14px;">typeScript</a> <a href="/tags/日志/" style="font-size: 14px;">日志</a>
-	    <!--<button class="btn btn-success tagsbtn">-->
-	      <!--<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a><span class="article-tag-list-count">3</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a><span class="article-tag-list-count">4</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeScript/">typeScript</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a><span class="article-tag-list-count">1</span></li></ul>-->
-	    <!--</button>-->
-	  
+		   <article class="post container">	
+	<div class="post-meta">
+		<span class="post-time">
+			2017-11-13
+		</span>
 	</div>
-</div>
+	<div class="post-title">
+		<h2 class="title">Jquery&lt;二&gt;</h2>
+	</div>
 
+	<div class="post-content">
+		<p>jq动画<br>show/hide/toggle<br>show(value) //在value时间段内显示<br>hide(value) //在value时间段内隐藏<br>toggle(value)//在value时间段内显示或显示 具体是根据当前取反<br>   在上面三个函数中，都是从左上角渐渐显示或隐藏<br>slideUp/slideDown/slideToggle   在垂直方向逐渐展开或收缩的。</p>
+<p>fadeIn/fadeOut/fadeToggle   //淡入淡出</p>
+<p>自定义animate<br>实现任意动画效果，需要传入的参数就是DOM元素最终的CSS状态和时间，jQuery在时间段内不断调整CSS直到达到我们设定的值：<br>let div = $(“#box”);<br>div.animate({<br>    width:200px,<br>    height:400px,<br>    opacity:0.25<br>},3000)<br>animate还可以传入一个函数，当动画结束时调用。<br>div.animate({<br>    width:30px,<br>    height:4848px,<br>    opacity:0.25<br>},3000,function(){<br>    //todo:…<br>});</p>
+<p>串联动画 举例：<br>var div = $(‘#test-animates’);<br>// 动画效果：slideDown - 暂停 - 放大 - 暂停 - 缩小<br>div.slideDown(2000)<br>   .delay(1000)<br>   .animate({<br>       width: ‘256px’,<br>       height: ‘256px’<br>   }, 2000)<br>   .delay(1000)<br>   .animate({<br>       width: ‘128px’,<br>       height: ‘128px’<br>   }, 2000);<br>}</p>
+<p>=====================================</p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="  ==============注意==============="></a>  ==============注意===============</h1><p>为什么有的动画没有效果<br>你可能会遇到，有的动画如slideUp()根本没有效果。这是因为jQuery动画的原理是逐渐改变CSS的值，如height从100px逐渐变为0。但是很多不是block性质的DOM元素，对它们设置height根本就不起作用，所以动画也就没有效果。<br>此外，jQuery也没有实现对background-color的动画效果，用animate()设置background-color也没有效果。这种情况下可以使用CSS3的transition实现动画效果。</p>
+<p>扩展JQuery<br>尽管jq很强大，但却不能永远满足所有的需求，此时，需要扩展jQuery插件。可以通过$.fn对象来实现。<br>$.fn.highlight1 = function () {<br>    // this已绑定为当前jQuery对象:<br>    this.css(‘backgroundColor’, ‘#fffceb’).css(‘color’, ‘#d85030’);<br>    return this;<br>}<br>细心的童鞋可能发现了，为什么最后要return this;？因为jQuery对象支持链式操作，我们自己写的扩展方法也要能继续链式下去：$(‘span.hl’).highlight1().slideDown();</p>
+<p>编写一个jQuery插件的原则：</p>
+<p>1.给$.fn绑定函数，实现插件的代码逻辑；<br>2.插件函数最后要return this;以支持链式调用；<br>3.插件函数要有默认值，绑定在$.fn.<pluginname>.defaults上；<br>4.用户在调用时可传入设定值以便覆盖默认值。</pluginname></p>
+<p>需求：用户希望高亮的颜色能自己来指定<br>解决方案：给方法加个参数。<br>$.fn.highlight = function (options) {<br>    // 合并默认值和用户设定值:<br>    var opts = $.extend({}, $.fn.highlight.defaults, options);<br>    this.css(‘backgroundColor’, opts.backgroundColor).css(‘color’, opts.color);<br>    return this;<br>}<br>// 设定默认值:<br>$.fn.highlight.defaults = {<br>    color: ‘#d85030’,<br>    backgroundColor: ‘#fff8de’<br>}<br>关于jQuery提供的辅助方法$.extend(target, obj1, obj2, …)，它把多个object对象的属性合并到第一个target对象中，遇到同名属性，总是使用靠后的对象的值，也就是越往后优先级越高.</p>
+
+	</div>
+</article>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">
