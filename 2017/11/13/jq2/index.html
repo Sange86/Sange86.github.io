@@ -71,8 +71,7 @@
 
 	<div class="post-content">
 		<p>jq动画<br>show/hide/toggle<br>show(value) //在value时间段内显示<br>hide(value) //在value时间段内隐藏<br>toggle(value)//在value时间段内显示或显示 具体是根据当前取反<br>   在上面三个函数中，都是从左上角渐渐显示或隐藏<br>slideUp/slideDown/slideToggle   在垂直方向逐渐展开或收缩的。</p>
-<p>fadeIn/fadeOut/fadeToggle   //淡入淡出</p>
-<p>自定义animate<br>实现任意动画效果，需要传入的参数就是DOM元素最终的CSS状态和时间，jQuery在时间段内不断调整CSS直到达到我们设定的值：<br>let div = $(“#box”);<br>div.animate({<br>    width:200px,<br>    height:400px,<br>    opacity:0.25<br>},3000)<br>animate还可以传入一个函数，当动画结束时调用。<br>div.animate({<br>    width:30px,<br>    height:4848px,<br>    opacity:0.25<br>},3000,function(){<br>    //todo:…<br>});</p>
+<p>fadeIn/fadeOut/fadeToggle   //淡入淡出<br><a id="more"></a><br>自定义animate<br>实现任意动画效果，需要传入的参数就是DOM元素最终的CSS状态和时间，jQuery在时间段内不断调整CSS直到达到我们设定的值：<br>let div = $(“#box”);<br>div.animate({<br>    width:200px,<br>    height:400px,<br>    opacity:0.25<br>},3000)<br>animate还可以传入一个函数，当动画结束时调用。<br>div.animate({<br>    width:30px,<br>    height:4848px,<br>    opacity:0.25<br>},3000,function(){<br>    //todo:…<br>});</p>
 <p>串联动画 举例：<br>var div = $(‘#test-animates’);<br>// 动画效果：slideDown - 暂停 - 放大 - 暂停 - 缩小<br>div.slideDown(2000)<br>   .delay(1000)<br>   .animate({<br>       width: ‘256px’,<br>       height: ‘256px’<br>   }, 2000)<br>   .delay(1000)<br>   .animate({<br>       width: ‘128px’,<br>       height: ‘128px’<br>   }, 2000);<br>}</p>
 <p>=====================================</p>
 <h1 id="注意"><a href="#注意" class="headerlink" title="  ==============注意==============="></a>  ==============注意===============</h1><p>为什么有的动画没有效果<br>你可能会遇到，有的动画如slideUp()根本没有效果。这是因为jQuery动画的原理是逐渐改变CSS的值，如height从100px逐渐变为0。但是很多不是block性质的DOM元素，对它们设置height根本就不起作用，所以动画也就没有效果。<br>此外，jQuery也没有实现对background-color的动画效果，用animate()设置background-color也没有效果。这种情况下可以使用CSS3的transition实现动画效果。</p>

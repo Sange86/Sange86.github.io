@@ -116,7 +116,8 @@
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>JSON<br>1-.JSON的字符串规定必须用双引号””</p>
+<p>关于浏览器<br>window对象内置的变量<br>innerWidth 浏览器有效区域宽度<br>innerHeight 浏览器有效区域高度<br>outerWidth  浏览器总宽度<br>outerHeight 浏览器总高度<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
@@ -137,7 +138,8 @@
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>map 映射 通过键值对来存储数据<br>可通过set,get来添加获取数据<br>var score = new Map();<br>score.set(“cui”,86);<br>score.get(“cui”);  //86<br>score.delete(“cui”);//移除<br>score.has(“cui”);//是否存在</p>
+<p>Set  常用做集合=&gt;存储一组不重复的数据<br>var A = new Set();<br>var B = new Set([1,2,3]);<br>var C = new Set([1,2,4,5,5,’5’]);<br>alert(C); //重复元素在Set中自动被过滤：<br>可通过add添加元素<br>C.add(6);<br>C.delete(4);//删除元素<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
@@ -158,7 +160,8 @@
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>substring() 返回指定索引区间的子串<br>var  s = “Hello, world”<br>s.substring(0,5)  //  从索引0开始到5（不包括5），返回’hello’<br>s.substring(7); // 从索引7开始到结束，返回’world’</p>
+<p>indexOf()会搜索指定字符串或者数组中元素出现的位置：<br>var s = ‘hello, world’;<br>s.indexOf(‘world’); // 返回7<br>s.indexOf(‘World’); // 没有找到指定的子串，返回-1<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
@@ -200,7 +203,8 @@
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>jq动画<br>show/hide/toggle<br>show(value) //在value时间段内显示<br>hide(value) //在value时间段内隐藏<br>toggle(value)//在value时间段内显示或显示 具体是根据当前取反<br>   在上面三个函数中，都是从左上角渐渐显示或隐藏<br>slideUp/slideDown/slideToggle   在垂直方向逐渐展开或收缩的。</p>
+<p>fadeIn/fadeOut/fadeToggle   //淡入淡出<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
@@ -221,7 +225,9 @@
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>JQuery操作DOM</p>
+<p>text() //获取当前节点里的文本<br>html()  //跟text()差不多  都是获取节点文本<br>以上两者在不带参数时，具有获取文本的功能，但带上参数时，这变成了修改节点文本的功能函数。</p>
+<p>在JQuery中，如果想修改某个节点的css样式，可通过css(‘name’,’value’)来修改。<br>css() 一样可区分带参数和不带参数的。用法跟text()一样。<br>addClass(“value”) //为某个节点添加类<br>removeClass(“value”)//移除类<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
@@ -242,7 +248,8 @@
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>操作DOM</p>
+<p>在实际中，我们往往需要往往需要修改DOM节点，可通过innerHTML来操作。但这往往会<br>修改当前节点的全部内容，为了不改变当前节点的内容，可以通过appendChild来把子节点添加到父节点上。<br>在使用appendChild时，注意区分谁是子节点，谁是父节点。//parent.appendChild(child)<br>insertBefore(parameter1,parameter2)//在指定标签元素前插入新的标签元素<br>  parameter1:  待插入的新标签元素<br>  parameter2:  指定的标签元素<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">

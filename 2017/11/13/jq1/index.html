@@ -72,7 +72,7 @@
 	<div class="post-content">
 		<p>JQuery操作DOM</p>
 <p>text() //获取当前节点里的文本<br>html()  //跟text()差不多  都是获取节点文本<br>以上两者在不带参数时，具有获取文本的功能，但带上参数时，这变成了修改节点文本的功能函数。</p>
-<p>在JQuery中，如果想修改某个节点的css样式，可通过css(‘name’,’value’)来修改。<br>css() 一样可区分带参数和不带参数的。用法跟text()一样。<br>addClass(“value”) //为某个节点添加类<br>removeClass(“value”)//移除类</p>
+<p>在JQuery中，如果想修改某个节点的css样式，可通过css(‘name’,’value’)来修改。<br>css() 一样可区分带参数和不带参数的。用法跟text()一样。<br>addClass(“value”) //为某个节点添加类<br>removeClass(“value”)//移除类<br><a id="more"></a></p>
 <p>关于节点的显示和隐藏，jq提供了hide()和show(),可以直接调用，无需关心display,<br>需要注意的是隐藏DOM节点并未改变DOM树的结构，它只影响DOM节点的显示。这和删除DOM节点是不同的</p>
 <p>attr()  获取并操纵节点属性  与之对应的是removeAttr()<br>div.attr(“name”);<br>div.attr(“width”,”250”);</p>
 <p>在jq中，也可以通过append()来添加新节点。用法跟原生js中的appendChild()差不多。<br>除了接受字符串，append()还可以传入原始的DOM对象，jQuery对象和函数对象：<br>// 创建DOM对象:<br>var ps = document.createElement(‘li’);<br>ps.innerHTML = ‘<span>Pascal</span>‘;<br>// 添加DOM对象:<br>ul.append(ps);<br>// 添加jQuery对象:<br>ul.append($(‘#scheme’));<br>// 添加函数对象:<br>ul.append(function (index, html) {<br>    return ‘<li><span>Language - ‘ + index + ‘</span></li>‘;<br>});</p>

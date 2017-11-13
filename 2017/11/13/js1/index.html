@@ -71,8 +71,7 @@
 
 	<div class="post-content">
 		<p>substring() 返回指定索引区间的子串<br>var  s = “Hello, world”<br>s.substring(0,5)  //  从索引0开始到5（不包括5），返回’hello’<br>s.substring(7); // 从索引7开始到结束，返回’world’</p>
-<p>indexOf()会搜索指定字符串或者数组中元素出现的位置：<br>var s = ‘hello, world’;<br>s.indexOf(‘world’); // 返回7<br>s.indexOf(‘World’); // 没有找到指定的子串，返回-1</p>
-<p>var arr = [20,40,5,86,33]<br>arr.indexOf(40);//元素40的索引为1</p>
+<p>indexOf()会搜索指定字符串或者数组中元素出现的位置：<br>var s = ‘hello, world’;<br>s.indexOf(‘world’); // 返回7<br>s.indexOf(‘World’); // 没有找到指定的子串，返回-1<br><a id="more"></a><br>var arr = [20,40,5,86,33]<br>arr.indexOf(40);//元素40的索引为1</p>
 <p>slice=&gt;</p>
 <p>slice()就是对应String的substring()版本，它截取Array的部分元素，然后返回一个新的Array<br>var arr = [1,2,3,5,8,9];<br>var a = arr.slice(0,3);<br>alert(a);   //a = [1,2,3]</p>
 <p>a = arr.slice(3);<br>alert(a);<br>如果不给slice()传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个Array<br>a = arr.slice();</p>

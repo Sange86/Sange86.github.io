@@ -71,7 +71,7 @@
 
 	<div class="post-content">
 		<p>操作DOM</p>
-<p>在实际中，我们往往需要往往需要修改DOM节点，可通过innerHTML来操作。但这往往会<br>修改当前节点的全部内容，为了不改变当前节点的内容，可以通过appendChild来把子节点添加到父节点上。<br>在使用appendChild时，注意区分谁是子节点，谁是父节点。//parent.appendChild(child)<br>insertBefore(parameter1,parameter2)//在指定标签元素前插入新的标签元素<br>  parameter1:  待插入的新标签元素<br>  parameter2:  指定的标签元素</p>
+<p>在实际中，我们往往需要往往需要修改DOM节点，可通过innerHTML来操作。但这往往会<br>修改当前节点的全部内容，为了不改变当前节点的内容，可以通过appendChild来把子节点添加到父节点上。<br>在使用appendChild时，注意区分谁是子节点，谁是父节点。//parent.appendChild(child)<br>insertBefore(parameter1,parameter2)//在指定标签元素前插入新的标签元素<br>  parameter1:  待插入的新标签元素<br>  parameter2:  指定的标签元素<br><a id="more"></a></p>
 <p>document.createElement(“p”)//通过js动态添加标签元素</p>
 <p>删除DOM<br>要删除一个节点，首先要获得该节点本身以及它的父节点，然后调用父节点的removeChild把自己删掉。<br>// 拿到待删除节点:<br>var self = document.getElementById(‘to-be-removed’);<br>// 拿到父节点:<br>var parent = self.parentElement;<br>// 删除:<br>var removed = parent.removeChild(self);<br>removed === self; // true  注意到删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置。</p>
 <p>canvas  画布</p>

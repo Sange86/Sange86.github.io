@@ -71,8 +71,7 @@
 
 	<div class="post-content">
 		<p>map 映射 通过键值对来存储数据<br>可通过set,get来添加获取数据<br>var score = new Map();<br>score.set(“cui”,86);<br>score.get(“cui”);  //86<br>score.delete(“cui”);//移除<br>score.has(“cui”);//是否存在</p>
-<p>Set  常用做集合=&gt;存储一组不重复的数据<br>var A = new Set();<br>var B = new Set([1,2,3]);<br>var C = new Set([1,2,4,5,5,’5’]);<br>alert(C); //重复元素在Set中自动被过滤：<br>可通过add添加元素<br>C.add(6);<br>C.delete(4);//删除元素</p>
-<p>rest  ES6新特性<br>表示参数中剩余的值  rest参数只能写在最后，前面用…标识<br>function restArr(a,b,…rest){<br>    console.log(a);//1<br>    console.log(b);//2<br>    console.log(rest);//3,4,5<br>}<br>restArr(1,2,3,4,5);</p>
+<p>Set  常用做集合=&gt;存储一组不重复的数据<br>var A = new Set();<br>var B = new Set([1,2,3]);<br>var C = new Set([1,2,4,5,5,’5’]);<br>alert(C); //重复元素在Set中自动被过滤：<br>可通过add添加元素<br>C.add(6);<br>C.delete(4);//删除元素<br><a id="more"></a><br>rest  ES6新特性<br>表示参数中剩余的值  rest参数只能写在最后，前面用…标识<br>function restArr(a,b,…rest){<br>    console.log(a);//1<br>    console.log(b);//2<br>    console.log(rest);//3,4,5<br>}<br>restArr(1,2,3,4,5);</p>
 <p>JavaScript的函数可以嵌套，此时，内部函数可以访问外部函数定义的变量，反过来则不行<br>function foo() {<br>    var x = 1;<br>    function bar() {<br>        var y = x + 1; // bar可以访问foo的变量x!<br>    }<br>    var z = y + 1; // ReferenceError! foo不可以访问bar的变量y!<br>}</p>
 <p>‘use strict’严格模式<br>严格模式下，变量都必须先用var命令声明，然后再使用</p>
 <p>解构赋值  ES6新特性<br>将一组对象以结构相同对象的方式存储起来。<br>常用于将两个对象一一映射，获取数据时，不再需要根据下标来获取了<br>var [x,y,z] = [‘I’,’love’,’water’]<br>let [x, [y, z]] = [‘hello’, [‘JavaScript’, ‘ES6’]];</p>
