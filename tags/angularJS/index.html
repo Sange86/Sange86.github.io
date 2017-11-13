@@ -68,30 +68,8 @@
 			  		2017-10-16
 			  	</div>
 			  	<div class="postright">
-				  	<a class="post-title" href="/2017/10/16/ng_directive/">
-				  		自定义指令directive
-				  	</a>
-			  	</div>
-			  </li>
-			
-			  <li class="post-item">
-			  	<div class="post-date">
-			  		2017-10-16
-			  	</div>
-			  	<div class="postright">
-				  	<a class="post-title" href="/2017/10/16/bootstrap1/">
-				  		初始bootstrap
-				  	</a>
-			  	</div>
-			  </li>
-			
-			  <li class="post-item">
-			  	<div class="post-date">
-			  		2017-10-16
-			  	</div>
-			  	<div class="postright">
-				  	<a class="post-title" href="/2017/10/16/angularjs3/">
-				  		angularJs函数
+				  	<a class="post-title" href="/2017/10/16/angularjs4/">
+				  		angularJs细节
 				  	</a>
 			  	</div>
 			  </li>
@@ -153,6 +131,19 @@
                     ctx.moveTo(0, can.height/2+deltaHeight);
                     // ctx.lineTo(can.width, can.height/2+deltaHeightRight);
                     ctx.bezierCurveTo(can.width /2, can.height/2+deltaHeight-50, 
+                    can.width / 2, can.height/2+deltaHeightRight-50, can.width, can.height/2+deltaHeightRight);
+                    ctx.lineTo(can.width, can.height);
+                    ctx.lineTo(0, can.height);
+                    ctx.lineTo(0, can.height/2+deltaHeight);
+                    ctx.closePath();
+                    ctx.fill();
+             }
+            requestAnimFrame(loop);
+           }
+           loop(); 
+        </script>
+	</body>
+</html>th /2, can.height/2+deltaHeight-50, 
                     can.width / 2, can.height/2+deltaHeightRight-50, can.width, can.height/2+deltaHeightRight);
                     ctx.lineTo(can.width, can.height);
                     ctx.lineTo(0, can.height);
