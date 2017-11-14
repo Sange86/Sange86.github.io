@@ -74,7 +74,11 @@
 <p>如果创建了多个数据库，在某一操作中，需要某个数据库的数据，则要进行数据库的切换，此时可以使用mysqli_select_db($conn,$dbname)来选择数据库</p>
 <p>&lt;======================================================&gt;<br>创建数据表<br>第一步：编写sql语句(表名,表字段名,定义每个表字段)<br>例如：$sql = “create table tb(“.<br>        “id INT NOT NULL AUTO_INCREMENT”//auto_increment表示自动增长<br>        “);<br>第二步：通过mysqli_query($conn,$sql)创建。</p>
 <p>删除数据表跟创建数据表差不多，只是sql语句不用，<br>$sql = “DROP TABLE tableName” </p>
-<p>&lt;==============================================&gt;<br>插入数据<br>$sql = “insert into table”.<br>       “(title,author,submission_data)”.<br>       “VALUES”.<br>       “(‘value1’,’value2’,’value3’)”;<br>如果一次性插入多条数据，只需要在VALUES后，添加逗号。例如:”(‘value1’,’value2’,’value3’),(‘value1’,’value2’,’value3’),(‘value1’,’value2’,’value3’)”;<br>如果插入带有中文的数据，这需要在插入前设置编码。<br>如下: mysqli_query($conn,”set names utf8”)       </p>
+<p>&lt;==============================================&gt;<br>插入数据<br>$sql = “insert into table”.<br>       “(title,author,submission_data)”.<br>       “VALUES”.<br>       “(‘value1’,’value2’,’value3’)”;<br>如果一次性插入多条数据，只需要在VALUES后，添加逗号。例如:”(‘value1’,’value2’,’value3’),(‘value1’,’value2’,’value3’),(‘value1’,’value2’,’value3’)”;<br>如果插入带有中文的数据，这需要在插入前设置编码。<br>如下: mysqli_query($conn,”set names utf8”)   </p>
+<p>&lt;=========================================&gt;<br>获取数据<br>$sql = “select id,name,title,submisson_data from dbname”;<br>1.使用php函数mysqli_query()来获取数据库中的数据。<br>2.通过mysqli_fetch_array($res,MYSQL_ASSOC)/mysqli_fetch_assoc($res)来使用或输出数据。</p>
+<p>备注：<br>mysqli_fetch_array() 函数从结果集中取得一行作为关联数组，或数字数组，或二者兼有。有两个参数，第一个为数据集，第二个为数据的下标类型。可取值为：MYSQL_ASSOC(字段名),MYSQL_NUM(数值下标),MYSQL_BOTH<br>通常我们使用select语句后，常需要释放游标内存。可使用mysqli_free_result()来释放。</p>
+<p>条件语句查询<br>select  * dbtable where title =”HTML5”;<br>在where中，数值是不区分大小写的，要想区分，可通过BINARY来区分。</p>
+<p>update更新语句<br>update dbtable set name = “贺娟娟” while id = 3;</p>
 
 	</div>
 </article>
