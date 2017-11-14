@@ -111,16 +111,16 @@
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/16/angularjs1/">
-					   			初识angularJS
+					   		<a class="post-title-link" href="/2017/10/16/hello-world/">
+					   			新的开始！
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		
+					   		<p>徐志摩说：我的世界太过安静，静得可以听见自己心跳的声音。心房的血液慢慢流回心室，如此这般的轮回。聪明的人，喜欢猜心，也许猜对了别人的心，却也失去了自己的。傻气的人，喜欢给心，也许会被人骗，却未必能得到别人的。你以为我刀枪不入，我以为你百毒不侵。终将有一天，每座城市都会遥远而陌生，每个爱过的人都会像一座城市一样面目不清。<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a></li></ul>
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日志/">日志</a></li></ul>
 		                   	</button>
 	                    </div>
 				   </article>
@@ -132,16 +132,79 @@
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/16/angular_servic/">
-					   			angularjs服务
+					   		<a class="post-title-link" href="/2017/10/16/route/">
+					   			angular-ui-路由
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>(1)$sce:安全处理html数据。在scope里面的数据中，有时存在标签的字符串数据($scope.data =”&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”),如果直接进行显示操作，结果仍然是&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”，而不是“我爱打水”，要想得到后者，则要注入$sce服务。具体事例如下：</p>
+					   		
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a></li></ul>
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular-route/">angular_route</a></li></ul>
+		                   	</button>
+	                    </div>
+				   </article>
+				
+				   <article class="post">
+				   	    <div class="post-meta">
+					   		<span class="post-time">
+					   			2017-10-16
+					   		</span>
+					   	</div>
+					   	<div class="post-title">
+					   		<a class="post-title-link" href="/2017/10/16/ng_directive/">
+					   			自定义指令directive
+					   		</a>
+					   	</div>
+					   	<div class="post-content">
+					   		<p>代码示例:<br>var m = angular.module(‘app’,[]);<br>m.directive(‘mystyle’,[function(){<br>    return {<br>    restrict:”A”,<br>    template:”我爱打水”,<br>    replace:true<br>}<br>}])<br>解析：directive的参数：(1)指令名称<br>                       (2)自定义处理函数，返回的是Json数据<br>属性：<br>      (1)restict:指令的表现形式(A(atrr)表示属性，E(elemt)：元素，C:class)<br>      (2)template:指令在页面的内容<br>
+					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJs/">angularJs</a></li></ul>
+		                   	</button>
+	                    </div>
+				   </article>
+				
+				   <article class="post">
+				   	    <div class="post-meta">
+					   		<span class="post-time">
+					   			2017-10-16
+					   		</span>
+					   	</div>
+					   	<div class="post-title">
+					   		<a class="post-title-link" href="/2017/10/16/h1/">
+					   			回忆常见的H5标签
+					   		</a>
+					   	</div>
+					   	<div class="post-content">
+					   		<p>(1) h5标签： 独占一行，数字越小，字体越大，有标题的语义。<br>(2) p标签：  独占一行，表述段落<br>(3) div标签：独占一行，没有语义，可以设置宽高。<br>(4) 其他独占一行的标签还有：hr(水平线) br(换行)<br>
+					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+		                   	</button>
+	                    </div>
+				   </article>
+				
+				   <article class="post">
+				   	    <div class="post-meta">
+					   		<span class="post-time">
+					   			2017-10-16
+					   		</span>
+					   	</div>
+					   	<div class="post-title">
+					   		<a class="post-title-link" href="/2017/10/16/css3/">
+					   			CSS3记录
+					   		</a>
+					   	</div>
+					   	<div class="post-content">
+					   		<p>(1)目标伪类选择器<br>   div:target{<br>   width:200px;<br>   height:200px;<br>   background:pink;<br>   }<br>   对于上述css样式，只有当div处于目标选中状态时，才有效，由此可看出元素并不是一定是目标元素，只有被选定时，才是。<br>
+					   	</div>
+					    <div class="post-tags">
+		                    <button class="btn btn-info">
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
 		                   	</button>
 	                    </div>
 				   </article>
@@ -149,7 +212,7 @@
 			</section>
 			
     <nav class="page-nav">
-    	<a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    	<a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
     </nav>
 
  	    	

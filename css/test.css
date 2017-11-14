@@ -5,6 +5,7 @@ body{
 	background: #c0c0c0;
 	height: 100%;
 }
+
 #can{
     background: pink;
     position: absolute;
@@ -159,9 +160,10 @@ body{
 .archive{
 	margin: 1em auto;
 	padding: 20px 20px;
-	background-color: #fff;
-	border: 1px solid #ddd;
+	/*background-color: #fff;*/
+	/*border: 1px solid #ddd;*/
 	box-shadow: 0 0 2px #ddd;
+	background: rgba(255,255,255,0.1);
 }
 .archive .post-archive{
 	list-style: none;
@@ -204,7 +206,8 @@ body{
 /*文章标签*/
 .tagsBg{
 	margin-top: 25px ;
-	background: #FFFFFF;
+	/*background: #FFFFFF;*/
+	background: rgba(255,255,255,0.5);
 }
 .article-tag-list{
 	margin: 0px;

@@ -107,21 +107,20 @@
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-11-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/11/13/jq2/">
-					   			Jquery&lt;二&gt;
+					   		<a class="post-title-link" href="/2017/10/16/angularjs2/">
+					   			angularJs常见的指令
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>jq动画<br>show/hide/toggle<br>show(value) //在value时间段内显示<br>hide(value) //在value时间段内隐藏<br>toggle(value)//在value时间段内显示或显示 具体是根据当前取反<br>   在上面三个函数中，都是从左上角渐渐显示或隐藏<br>slideUp/slideDown/slideToggle   在垂直方向逐渐展开或收缩的。</p>
-<p>fadeIn/fadeOut/fadeToggle   //淡入淡出<br>
+					   		<p>(1)ng-true-value=”1”  选择时，指定值为1;<br>(2)ng-false-value=”0”  取消时，指定值为0;<br> <strong>一般配合checkBox 来使用</strong><br>(3)ng-show:当为true时，显示某元素，反之亦然。<br>(4)ng-options:下拉选项指令 一般值为：ng-options=’v.value as v.name for v in data’<br>(5)ng-trim:去掉前后空格(很少用)<br>(6)ng-if:隐藏元素(删除当前元素，即是从DOM中移除节点，注意与ng-show的区别)<br>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a></li></ul>
 		                   	</button>
 	                    </div>
 				   </article>
@@ -129,22 +128,20 @@
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-11-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/11/13/jq1/">
-					   			Jquery&lt;一&gt;
+					   		<a class="post-title-link" href="/2017/10/16/angularjs1/">
+					   			初识angularJS
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>JQuery操作DOM</p>
-<p>text() //获取当前节点里的文本<br>html()  //跟text()差不多  都是获取节点文本<br>以上两者在不带参数时，具有获取文本的功能，但带上参数时，这变成了修改节点文本的功能函数。</p>
-<p>在JQuery中，如果想修改某个节点的css样式，可通过css(‘name’,’value’)来修改。<br>css() 一样可区分带参数和不带参数的。用法跟text()一样。<br>addClass(“value”) //为某个节点添加类<br>removeClass(“value”)//移除类<br>
+					   		
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a></li></ul>
 		                   	</button>
 	                    </div>
 				   </article>
@@ -152,64 +149,20 @@
 				   <article class="post">
 				   	    <div class="post-meta">
 					   		<span class="post-time">
-					   			2017-11-13
+					   			2017-10-16
 					   		</span>
 					   	</div>
 					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/11/13/js4/">
-					   			javascript&lt;四&gt;
+					   		<a class="post-title-link" href="/2017/10/16/angular_servic/">
+					   			angularjs服务
 					   		</a>
 					   	</div>
 					   	<div class="post-content">
-					   		<p>操作DOM</p>
-<p>在实际中，我们往往需要往往需要修改DOM节点，可通过innerHTML来操作。但这往往会<br>修改当前节点的全部内容，为了不改变当前节点的内容，可以通过appendChild来把子节点添加到父节点上。<br>在使用appendChild时，注意区分谁是子节点，谁是父节点。//parent.appendChild(child)<br>insertBefore(parameter1,parameter2)//在指定标签元素前插入新的标签元素<br>  parameter1:  待插入的新标签元素<br>  parameter2:  指定的标签元素<br>
+					   		<p>(1)$sce:安全处理html数据。在scope里面的数据中，有时存在标签的字符串数据($scope.data =”&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”),如果直接进行显示操作，结果仍然是&lt;标签 style=’color:pink;’&gt;我爱打水&lt;/标签&gt;”，而不是“我爱打水”，要想得到后者，则要注入$sce服务。具体事例如下：</p>
 					   	</div>
 					    <div class="post-tags">
 		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-		                   	</button>
-	                    </div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-10-22
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/22/angular2_1/">
-					   			初始angular2
-					   		</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p><1>angular2的数据绑定</1></p>
-<p>   (‘click’):事件绑定</p>
-					   	</div>
-					    <div class="post-tags">
-		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular2/">angular2</a></li></ul>
-		                   	</button>
-	                    </div>
-				   </article>
-				
-				   <article class="post">
-				   	    <div class="post-meta">
-					   		<span class="post-time">
-					   			2017-10-18
-					   		</span>
-					   	</div>
-					   	<div class="post-title">
-					   		<a class="post-title-link" href="/2017/10/18/typeScript/">
-					   			初始typeScript
-					   		</a>
-					   	</div>
-					   	<div class="post-content">
-					   		<p>&lt;数据类型&gt;<br>1 void – 空  一般用于返回值<br>2 null –null  只能是null<br>3 undefined –undefined  只有一种值undefined<br>4 enum(枚举)<br>    *有限的可能性(有限个数)<br>5 any –变体变量  可赋值任何类型数据<br>
-					   	</div>
-					    <div class="post-tags">
-		                    <button class="btn btn-info">
-		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeScript/">typeScript</a></li></ul>
+		                   	  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs服务/">angularjs服务</a></li></ul>
 		                   	</button>
 	                    </div>
 				   </article>
@@ -217,7 +170,7 @@
 			</section>
 			
     <nav class="page-nav">
-    	<a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    	<a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
     </nav>
 
  	    	
