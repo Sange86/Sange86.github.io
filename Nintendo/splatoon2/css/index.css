@@ -1,0 +1,519 @@
+/* 基础样式 */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	font-family: "微软雅黑";
+    font-size: 80%;
+    color: #3c3c3c;
+}
+.clearfix::before,.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix{
+    zoom:1;
+    /*;为了兼容ie6，7，8*/
+}
+/* index样式 */
+.all{
+	width: 100%;
+	min-width: 1315px;
+}
+.all .head{
+	height: 40px;
+	width: 100%;
+	text-align: center;
+}
+.all .head .head-logo{
+	width: 74px;
+    height: 18px;
+	margin-left:  auto;
+	margin-right: auto;    
+	padding-top: 11px;	
+}
+.all .head a{
+	display: block;
+	width: 74px;
+    height: 18px;
+	background: url('../img/ncommon_ghdr_sprite-s0caa9f8ce1.png') no-repeat ;
+	background-position: 0 -957px;
+}
+.all .main1{
+	height: 100%;
+	width: 100%;
+	text-align: center;	
+	position: relative;
+}
+.all .main1 .main1-bg1 {
+	width: 100%;
+
+}
+.all .main1 .main1-bg1 img{
+	width: 100%;
+}
+.all .main1 .main1-ele1{
+	position: absolute;
+    bottom: 3%;
+    left: 3%;
+    width: 262px;
+    max-width: 18.7142857143%;
+}
+.all .main1 .main1-ele1 img{
+	display: block;
+	width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+.all .main1 .main1-ele1 img:hover{
+	opacity: 0.7;
+}
+.all .main1 .main1-ele2{
+	position: absolute;
+    bottom: 3%;
+    left: 20%;
+    width: 262px;
+    max-width: 18.7142857143%;
+}
+.all .main1 .main1-ele2{
+	position: absolute;
+    bottom: 1%;
+    left: 19%;
+    width: 262px;
+    max-width: 18.7142857143%;
+}
+.all .main1 .main1-ele2 img{
+	display: block;
+	width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+.all .main1 .main1-ele2 img:hover{
+	opacity: 0.7;
+}
+.all .main1 .main1-ele3{
+	position: absolute;
+    bottom: 4%;
+    right: 5%;
+    width: 376px;
+    max-width: 26.8571428571%;
+}
+.all .main1 .main1-ele4 img{
+	display: block;
+	width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+.all .main1 .main1-logo{
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+.all .main1 .main1-logo img{
+	max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+.main2{
+	margin-top: -3px;
+	width: 100%
+}
+.main2-top{
+	box-sizing: border-box;
+	height: 96px;
+	width: 100%;
+	position: relative;
+    background: url("../img/main_movie_bg.png") repeat center bottom;
+    background-size: 100% auto;
+    z-index: 10;
+}
+.main2-top::before{
+	content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top:96px;
+    width: 100%;
+    height: 0;
+    padding-top: 8.2142857143%;
+    background: url("../img/main_movie_bg_bottom.png") repeat-x center top;
+    background-size: 100% auto;
+    z-index: 100;
+}
+.main2-top ul {
+	width: 800px;
+	margin: 0 auto;
+}
+.main2-top ul li{
+	float: left;
+ 	padding: 15px 2%;
+
+}
+.main2-bottom{
+	text-align: center;
+    background: url("../img/about_bg.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.main2-bottom-a {
+	width: 1000px;
+	margin: 0 auto;
+}
+.main2-bottom-a ul{
+	padding-top: 100px;
+	margin: 0 auto;
+}
+.main2-bottom-a ul li{
+	float: left;
+	padding: 0 5px;
+	transition: all 0.3s;
+}
+.main2-bottom-a ul li:hover{
+	transform: translateY(-10px);
+}
+.main2-bottom-a ul li img{
+	width: 100%;
+}
+.main2-bottom-b img{
+	width: 100%;
+}
+.main2-bottom-c {
+	
+	margin: 30px auto;
+}
+.main2-bottom-d {
+	text-align: center;
+	margin: 30px auto;
+}
+.main2-bottom-e{
+	position: relative;
+	text-align: center;
+    width: 955px;
+    max-width: 955px;
+    margin: 0 auto;
+    z-index: 0;
+}
+.main2-bottom-e::after{
+	content: "";
+    display: block;
+    position: absolute;
+    left: -175px;
+    top: -25px;
+    width: 267px;
+    height: 241px;
+    padding-top: 8.2142857143%;
+    background: url("../img/about_i_ika.png") repeat-x center top;
+    background-size: 100% auto;
+    z-index: 100;
+}
+.main2-bottom-e::before{
+	content: "";
+    display: block;
+    position: absolute;
+    right: -178px;
+    top: -50px;
+    width: 265px;
+    height: 235px;
+    padding-top: 8.2142857143%;
+    background: url("../img/about_i_vs.png") repeat-x center top;
+    background-size: 100% auto;
+    z-index: 100;
+}
+.main2-bottom-e-video{
+  width: 551.45px;
+  height: 407px;
+  margin: 0 auto;
+  z-index: -1;
+  padding-top: 50px;
+}
+.main2-bottom-e-bg{
+	position: absolute;
+	top: 0
+}
+.alal{
+	overflow-x: hidden;
+	margin-top: -110px;
+	height: 100%;
+	width: 100%;
+	padding-bottom: 110px;
+}
+.main2-bottom-f{
+	position: relative;
+	height: 700px;
+}
+.main2-bottom-f-left{
+	visibility: hidden;
+	position: absolute;
+	left: 150px;
+	float: left;
+	width: 558px;
+	z-index: 10;
+	top: 0;
+}
+.main2-bottom-f-left img:nth-child(1){
+	height: 94px;
+	margin-bottom: 50px;
+}
+.main2-bottom-f-left img:nth-child(2){
+	height: 160px;
+	margin-bottom: 50px;
+}
+.main2-bottom-f-left img:nth-child(3){
+	height: 215px;
+	margin-bottom: 50px;
+}
+.main2-bottom-f-right{
+	float: right;
+	position: absolute;
+	right: 0px;
+	top: 0;	
+}
+.main2-bottom-f-right img{
+	height: 685px;	
+}
+@keyframes move1 {
+            0%{	
+            	z-index: 10;
+	
+            	left:0;
+                opacity: 0;
+            }
+            100%{
+            	z-index: 10;
+				left: 150px;
+						
+                opacity: 1;
+            }
+}
+@keyframes move2 {
+            0%{	
+            	
+            	right: -100px;
+                opacity: 0;
+            }
+            100%{
+				right: 0px;
+						
+                opacity: 1;
+            }
+}
+.img-left{
+	visibility: visible;
+	 animation:move1 2s; 
+}
+.img-right{
+	 animation:move2 2s; 
+}
+.main3{
+	position: relative;
+}
+.main3 .main3-bg img{
+	width: 100%;
+}
+.main3 .main3-bg{
+	width: 100%;
+}
+.main3 .main3-a{
+	width: 100%;
+}
+.main3 .main3-a img{
+	width: 100%;
+}
+.main3 .main3-a{
+	position: absolute;
+	top: -25%;
+	right: 0;
+}
+.main4{
+	margin-top: -3px;
+	position: relative;
+}
+.main4 .main4-bg img{
+	width: 100%;
+}
+.main4 .main4-bg{
+	width: 100%;
+}
+
+.main4 .main4-a img{
+	width: 100%;
+}
+.main4 .main4-a{
+	width: 100%;
+	position: absolute;
+    top: -25%;
+	right: 0;
+	z-index: 9;
+}
+.main5{
+	margin-top: -3px;
+	position: relative;
+}
+.main5 .main5-bg img{
+	width: 100%;
+}
+.main5 .main5-bg{
+	width: 100%;
+}
+.main5 .main5-a{
+	width: 100%;
+}
+.main5 .main5-a img{
+	width: 100%;
+}
+.main5 .main5-a{
+	position: absolute;
+    top: -10%;
+	left: 0;
+}
+.main6{
+	margin-top: -3px;
+	position: relative;
+}
+.main6 .main6-bg img{
+	width: 100%;
+}
+.main6 .main6-bg{
+	width: 100%;
+}
+.main6 .main6-a{
+	position: absolute;
+   	bottom: 25%;
+   	right: 10%;
+   	cursor: pointer;
+}
+.main6 .main6-a::after{
+	content: "";
+	display: block;
+	background: url('../img/top_splash2.png');
+	top: -90px;
+	right: -30px;
+	width: 148px;
+	height: 137px;
+	position: absolute;
+}
+.main6 .main6-a::before{
+	content: "";
+	display: block;
+	background: url('../img/top_btn_yajirushi2.png');
+	top: 55px;
+	right: 40px;
+	width: 56px;
+	height: 44px;
+	position: absolute;
+	animation: move3 0.8s infinite;
+}
+@keyframes move3{
+	0%{
+		right: 40px;
+	}
+	50%{
+		right: 20px;
+	}
+	100%{
+		right: 40px;
+	}
+}
+.foot{
+	width: 100%;
+	margin-top: -3px;
+	text-align: center;
+	position: relative;
+}
+.foot a{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 100;
+}
+.foot a img{
+	width: 75%;
+}
+.foot-bg{
+	position: relative;
+	width: 100%;
+	background: url('../img/footer_bg_top.png') no-repeat ;
+	background-size: cover;
+}
+.foot-bg .foot-nav{
+	font-weight: 700;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+.foot-bg .foot-nav p{
+	margin-bottom: 5px;
+}
+.foot-bg .foot-nav ul li{
+	margin-bottom: 3px;
+}
+.hid{
+	width: 100%;
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hid-a{
+	width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: scroll;
+	cursor: pointer;
+	text-align: center;
+}
+.hid-a-a{
+	float: right;
+	padding-top: 50px;
+}
+.hid-a-b{
+	position: fixed;
+    top: 50px;
+    right: 40px;
+    z-index: 10;
+    cursor: pointer;
+}
+.hid-a-c{
+	margin-top: 350px;
+	padding-bottom: 50px;
+}
+.hid-a-d{
+	position: relative;
+	padding-bottom: 50px;
+	background: url('../img/playstyle_playmode.png') no-repeat;
+	width: 1030px;
+	height: 854px;
+	margin: 0 auto;
+	text-align: center;
+}
+.hid-a-d img{
+	position: absolute;
+	bottom: 100px;
+	left: 30%;
+}
+.main2-bottom-a ul li:nth-child(5) img{
+	cursor: pointer;
+}
+
