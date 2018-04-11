@@ -73,10 +73,13 @@
 		<p>条件语句查询<br>select  * dbtable where title =”HTML5”;<br>在where中，数值是不区分大小写的，要想区分，可通过BINARY来区分。</p>
 <p>update更新语句<br>update dbtable set name = “贺娟娟” while id = 3;</p>
 <p>删除记录<br>delete from dbtable where id = num;<br>当没有where时，执行时，删除整个表数据。</p>
-<p>like字句:  查询含有%com字段的数据，字段需要在末尾。<br>select * from dbtable where author like ‘%com’;</p>
+<p>like字句:  查询含有%com字段的数据。%表示任意内容<br>select * from dbtable where author like ‘%com’;</p>
 <p>union操作符：作用于合并select语句所得的结果集，并过滤掉重复数据。  如果是union all  则不会过滤重复数据。</p>
 <p>排序操作order by…<br>升序：asc<br>降序：desc<br>select * from dbtable where author=”sange” order by id=3 desc;</p>
-<p>GROUP BY语句 :将数据按照某种约定进行分组。<br>select name ,count(*) from dbtable ground by name;<br>以上是按名字进行分组并统计次数。<br>WITH ROLLUP 可以实现在分组统计数据基础上再进行相同的统计（SUM,AVG,COUNT…）。<br>例如我们将以上的数据表按名字进行分组，再统计每个人登录的次数：<br>SELECT name, SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;<br>注意：coalesce 来设置一个可以取代 NUll(总计) 的名称<br>SELECT coalesce(name, ‘总数’), SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;</p>
+<p>GROUP BY语句 :将数据按照某种约定进行分组。<br>select name ,count(*) from dbtable ground by name;<br>以上是按名字进行分组并统计次数。<br>WITH ROLLUP 可以实现在分组统计数据基础上再进行相同的统计（SUM,AVG,COUNT…）。<br>例如我们将以上的数据表按名字进行分组，再统计每个人登录的次数：<br>SELECT name, SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;<br>注意：coalesce 来设置一个可以取代 NUll(总计) 的名称<br>SELECT coalesce(name, ‘总数’), SUM(singin) as singin_count FROM  employee_tbl GROUP BY name WITH ROLLUP;<br>连接的使用(join)<br>join分三类：内连(inner join)，左连(left join)，右连(right join)。<br>内连：获取两个表中字段匹配关系的记录(只有匹配的数据才能获取到)<br>mysql&gt; SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a INNER JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;<br>左连：通过某种约定进行匹配，左表数据全部获取，对应的右表只获取匹配的数据<br> SELECT a.runoob_id, a.runoob_author, b.runoob_count FROM runoob_tbl a LEFT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;<br> 右连：与左连刚好相反。</p>
+<p>在mysql中，判断某字段值是否是NULL,不能用= 或者！=。而是用关键字is null or is not null.<br>IS NULL: 当列的值是 NULL,此运算符返回 true。<br>IS NOT NULL: 当列的值不为 NULL, 运算符返回 true。</p>
+<p>防止表中出现重复数据<br>方案一：在MySQL数据表中设置指定的字段为 PRIMARY KEY（主键） 或者 UNIQUE（唯一） 索引来保证数据的唯一性。<br>CREATE TABLE person_tbl<br>(<br>   first_name CHAR(20) NOT NULL,<br>   last_name CHAR(20) NOT NULL,<br>   sex CHAR(10),<br>   PRIMARY KEY (last_name, first_name)<br>);<br>mysql&gt; INSERT IGNORE INTO person_tbl (last_name, first_name)<br>    -&gt; VALUES( ‘Jay’, ‘Thomas’);</p>
+<p>导出表数据：(注意导出路径，需要与配置相同，否则会导出失败)<br>select * from dbtable into outfile ‘G:/wampserver/wamp/tmp/output.txt’;<br>导入表数据 (注意需导入数据所在的位置，一定要明确)<br>load data local infile ‘G:/wampserver/wamp/tmp/input.txt’ into table test;</p>
 
 	</div>
 </article>
@@ -141,7 +144,7 @@
              }
             requestAnimFrame(loop);
            }
-           loop(); 
+           loop();            
         </script>
 	</body>
 </html>

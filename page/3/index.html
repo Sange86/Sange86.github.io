@@ -60,8 +60,8 @@
 		<canvas id="can" ></canvas>
 		<div class="bodyheight">
 		   <div class="wbox" >  
-    <div class="container">
-      <img src="css/images/banners.jpg" class="img-responsive"/>
+    <div >
+      <img src="css/images/banners.jpg" class="img-responsive" id="wbox"/>
     </div>	
 </div>
 <div class="box">
@@ -220,7 +220,14 @@
 </div>
  
 	   
-
+<script>
+   window.onload = function(){
+   	var wbox = document.getElementById("wbox");
+    wbox.width = window.innerWidth;
+    wbox.height = window.innerHeight-50;
+//  alert(wbox.height);
+   }
+</script>
 		</div>	
 		<div class="nav navbar-default footers">
  	<div class="container footer">
@@ -282,7 +289,7 @@
              }
             requestAnimFrame(loop);
            }
-           loop(); 
+           loop();            
         </script>
 	</body>
 </html>
